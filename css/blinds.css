@@ -1,0 +1,5960 @@
+﻿/*==============================================================================
+    GIS CURTAIN DÉCOR
+    BLINDS.CSS — PART 01
+    FULL CORRECTED VERSION
+
+    --------------------------------------------------------------------------
+    PART 01
+    • Page Hero
+    • Hero Image
+    • Hero Overlay
+    • Hero Content
+    • Breadcrumb
+    • Intro Section
+    • Desktop
+    • Tablet
+    • Mobile
+    • Small Mobile
+    • Extra Small Mobile
+    --------------------------------------------------------------------------
+
+    IMPORTANT
+    --------------------------------------------------------------------------
+    Hero alignment is CENTERED to match the Curtain page.
+    Product image sizing is handled ONLY in PART 02.
+==============================================================================*/
+
+
+/*==============================================================================
+    01. PAGE HERO
+==============================================================================*/
+
+.page-hero {
+    position: relative;
+    width: 100%;
+    min-height: 68vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    isolation: isolate;
+    background: #000;
+    box-sizing: border-box;
+}
+
+
+/*==============================================================================
+    02. HERO IMAGE WRAPPER
+==============================================================================*/
+
+.page-hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+    /*==============================================================================
+    03. HERO IMAGE
+==============================================================================*/
+
+    .page-hero-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        object-fit: cover;
+        object-position: center;
+        transform: scale(1.03);
+        transition: transform 8s ease;
+    }
+
+
+/*==============================================================================
+    04. HERO IMAGE HOVER
+==============================================================================*/
+
+@media (hover: hover) {
+
+    .page-hero:hover
+    .page-hero-image img {
+        transform: scale(1);
+    }
+}
+
+
+/*==============================================================================
+    05. HERO OVERLAY
+==============================================================================*/
+
+.page-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient( 90deg, rgba(0,0,0,.82) 0%, rgba(0,0,0,.62) 50%, rgba(0,0,0,.42) 100% );
+}
+
+
+    /*==============================================================================
+    06. HERO OVERLAY DECORATION
+==============================================================================*/
+
+    .page-overlay::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient( circle at 18% 30%, rgba(200,169,106,.16), transparent 55% );
+    }
+
+
+/*==============================================================================
+    07. HERO CONTAINER
+==============================================================================*/
+
+.page-hero > .container {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+
+/*==============================================================================
+    08. HERO CONTENT
+==============================================================================*/
+
+.page-hero-content {
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 110px 0 70px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+    /*==============================================================================
+    09. HERO SECTION TAG
+==============================================================================*/
+
+    .page-hero-content .section-tag {
+        display: inline-block;
+        margin-bottom: 1rem;
+        color: var(--primary);
+        text-align: center;
+    }
+
+
+    /*==============================================================================
+    10. HERO TITLE
+==============================================================================*/
+
+    .page-hero-content h1 {
+        width: 100%;
+        max-width: 850px;
+        margin: 1rem auto 1.5rem;
+        color: var(--white);
+        font-family: var(--font-heading);
+        font-size: clamp( 3rem, 6vw, 5rem );
+        font-weight: 600;
+        line-height: 1.08;
+        text-align: center;
+        text-wrap: balance;
+        overflow-wrap: break-word;
+    }
+
+
+    /*==============================================================================
+    11. HERO DESCRIPTION
+==============================================================================*/
+
+    .page-hero-content p {
+        width: 100%;
+        max-width: 720px;
+        margin: 0 auto 0;
+        color: rgba(255,255,255,.90);
+        font-size: 1.05rem;
+        line-height: 1.9;
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+
+/*==============================================================================
+    12. BREADCRUMB
+==============================================================================*/
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .7rem;
+    width: 100%;
+    margin-top: 1.75rem;
+    color: rgba(255,255,255,.72);
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+    /*==============================================================================
+    13. BREADCRUMB LINK
+==============================================================================*/
+
+    .breadcrumb a {
+        color: var(--white);
+        font-weight: 500;
+        transition: color .25s ease;
+    }
+
+
+        /*==============================================================================
+    14. BREADCRUMB HOVER
+==============================================================================*/
+
+        .breadcrumb a:hover {
+            color: var(--primary);
+        }
+
+
+    /*==============================================================================
+    15. BREADCRUMB CURRENT / SEPARATOR
+==============================================================================*/
+
+    .breadcrumb span {
+        color: rgba(255,255,255,.72);
+    }
+
+
+/*==============================================================================
+    16. INTRO SECTION FOUNDATION
+==============================================================================*/
+
+.blinds-intro {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: var(--white);
+    box-sizing: border-box;
+    overflow-x: clip;
+}
+
+
+    /*==============================================================================
+    17. INTRO CONTAINER
+==============================================================================*/
+
+    .blinds-intro > .container {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+
+    /*==============================================================================
+    18. INTRO SECTION TITLE
+==============================================================================*/
+
+    .blinds-intro .section-title {
+        width: 100%;
+        max-width: 820px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+
+        /*==============================================================================
+    19. INTRO TITLE
+==============================================================================*/
+
+        .blinds-intro .section-title h2 {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 12px;
+            text-align: center;
+            text-wrap: balance;
+            overflow-wrap: break-word;
+        }
+
+
+        /*==============================================================================
+    20. INTRO DESCRIPTION
+==============================================================================*/
+
+        .blinds-intro .section-title p {
+            width: 100%;
+            max-width: 720px;
+            margin: 0 auto;
+            color: var(--text);
+            font-size: 14px;
+            line-height: 1.8;
+            text-align: center;
+            overflow-wrap: break-word;
+        }
+
+
+            /*==============================================================================
+    21. INTRO PARAGRAPH SPACING
+==============================================================================*/
+
+            .blinds-intro .section-title p + p {
+                margin-top: 10px;
+            }
+
+
+/*==============================================================================
+    22. GLOBAL WIDTH SAFETY
+==============================================================================*/
+
+.page-hero,
+.blinds-intro {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+    /*==============================================================================
+    23. HERO / INTRO TEXT SAFETY
+==============================================================================*/
+
+    .page-hero h1,
+    .page-hero h2,
+    .page-hero h3,
+    .page-hero p,
+    .blinds-intro h1,
+    .blinds-intro h2,
+    .blinds-intro h3,
+    .blinds-intro p {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+
+/*==============================================================================
+    24. TABLET
+==============================================================================*/
+
+@media (max-width: 992px) {
+
+    /*----------------------------------------------------------------------
+        HERO
+    ----------------------------------------------------------------------*/
+
+    .page-hero {
+        min-height: 600px;
+    }
+
+
+        /*----------------------------------------------------------------------
+        HERO CONTAINER
+    ----------------------------------------------------------------------*/
+
+        .page-hero > .container {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+            box-sizing: border-box;
+        }
+
+
+    /*----------------------------------------------------------------------
+        HERO CONTENT
+    ----------------------------------------------------------------------*/
+
+    .page-hero-content {
+        width: 100%;
+        max-width: 820px;
+        padding: 95px 0 60px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+
+        /*----------------------------------------------------------------------
+        HERO TITLE
+    ----------------------------------------------------------------------*/
+
+        .page-hero-content h1 {
+            font-size: clamp( 2.8rem, 7vw, 4.2rem );
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /*----------------------------------------------------------------------
+        HERO DESCRIPTION
+    ----------------------------------------------------------------------*/
+
+        .page-hero-content p {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 16px;
+        }
+
+
+    /*----------------------------------------------------------------------
+        BREADCRUMB
+    ----------------------------------------------------------------------*/
+
+    .breadcrumb {
+        justify-content: center;
+        margin-top: 17px;
+    }
+
+
+    /*----------------------------------------------------------------------
+        INTRO
+    ----------------------------------------------------------------------*/
+
+    .blinds-intro {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+
+/*==============================================================================
+    25. MOBILE
+==============================================================================*/
+
+@media (max-width: 768px) {
+
+    /*----------------------------------------------------------------------
+        HERO
+    ----------------------------------------------------------------------*/
+
+    .page-hero {
+        min-height: 500px;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+        /*----------------------------------------------------------------------
+        HERO CONTAINER
+    ----------------------------------------------------------------------*/
+
+        .page-hero > .container {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 16px;
+            padding-right: 16px;
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+        }
+
+
+    /*----------------------------------------------------------------------
+        HERO CONTENT
+    ----------------------------------------------------------------------*/
+
+    .page-hero-content {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 80px 0 55px;
+        text-align: center;
+    }
+
+
+        /*----------------------------------------------------------------------
+        HERO TAG
+    ----------------------------------------------------------------------*/
+
+        .page-hero-content .section-tag {
+            display: block;
+            width: 100%;
+            margin: 0 auto 9px;
+            font-size: 11px;
+            text-align: center;
+        }
+
+
+        /*----------------------------------------------------------------------
+        HERO TITLE
+    ----------------------------------------------------------------------*/
+
+        .page-hero-content h1 {
+            width: 100%;
+            max-width: 100%;
+            margin: 10px auto 14px;
+            font-size: clamp( 2.25rem, 9vw, 3rem );
+            line-height: 1.08;
+            text-align: center;
+        }
+
+
+        /*----------------------------------------------------------------------
+        HERO DESCRIPTION
+    ----------------------------------------------------------------------*/
+
+        .page-hero-content p {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            font-size: 14px;
+            line-height: 1.75;
+            text-align: center;
+        }
+
+
+    /*----------------------------------------------------------------------
+        BREADCRUMB
+    ----------------------------------------------------------------------*/
+
+    .breadcrumb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 15px auto 0;
+        gap: 6px;
+        font-size: 11px;
+        text-align: center;
+    }
+
+
+    /*----------------------------------------------------------------------
+        INTRO
+    ----------------------------------------------------------------------*/
+
+    .blinds-intro {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+
+        .blinds-intro > .container {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 16px;
+            padding-right: 16px;
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+        }
+
+
+        .blinds-intro .section-title {
+            width: 100%;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+
+            .blinds-intro .section-title h2 {
+                width: 100%;
+                max-width: 100%;
+                margin: 0 auto 10px;
+                font-size: 2rem;
+                line-height: 1.15;
+                text-align: center;
+            }
+
+
+            .blinds-intro .section-title p {
+                width: 100%;
+                max-width: 100%;
+                margin: 0 auto;
+                font-size: 13.5px;
+                line-height: 1.75;
+                text-align: center;
+            }
+
+
+                .blinds-intro .section-title p + p {
+                    margin-top: 10px;
+                }
+}
+
+
+/*==============================================================================
+    26. SMALL MOBILE
+==============================================================================*/
+
+@media (max-width: 480px) {
+
+    /*----------------------------------------------------------------------
+        HERO
+    ----------------------------------------------------------------------*/
+
+    .page-hero {
+        min-height: 480px;
+    }
+
+
+        .page-hero > .container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+
+    .page-hero-content {
+        padding: 80px 0 45px;
+    }
+
+
+        .page-hero-content .section-tag {
+            margin-bottom: 8px;
+            font-size: 10.5px;
+        }
+
+
+        .page-hero-content h1 {
+            margin: 9px auto 13px;
+            font-size: 2.3rem;
+            line-height: 1.08;
+        }
+
+
+        .page-hero-content p {
+            font-size: 13.5px;
+            line-height: 1.75;
+        }
+
+
+    .breadcrumb {
+        margin-top: 14px;
+        gap: 5px;
+        font-size: 10.5px;
+        justify-content: center;
+    }
+
+
+    /*----------------------------------------------------------------------
+        INTRO
+    ----------------------------------------------------------------------*/
+
+    .blinds-intro > .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+
+    .blinds-intro .section-title h2 {
+        font-size: 1.95rem;
+    }
+
+
+    .blinds-intro .section-title p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+}
+
+
+/*==============================================================================
+    27. EXTRA SMALL MOBILE
+==============================================================================*/
+
+@media (max-width: 360px) {
+
+    /*----------------------------------------------------------------------
+        HERO
+    ----------------------------------------------------------------------*/
+
+    .page-hero {
+        min-height: 450px;
+    }
+
+
+        .page-hero > .container {
+            padding-left: 13px;
+            padding-right: 13px;
+        }
+
+
+    .page-hero-content {
+        padding: 70px 0 40px;
+    }
+
+
+        .page-hero-content h1 {
+            font-size: 1.95rem;
+            line-height: 1.08;
+        }
+
+
+        .page-hero-content p {
+            font-size: 12.5px;
+            line-height: 1.7;
+        }
+
+
+    .breadcrumb {
+        margin-top: 12px;
+        font-size: 10px;
+        gap: 4px;
+    }
+
+
+    /*----------------------------------------------------------------------
+        INTRO
+    ----------------------------------------------------------------------*/
+
+    .blinds-intro > .container {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+
+    .blinds-intro .section-title h2 {
+        font-size: 1.7rem;
+    }
+
+
+    .blinds-intro .section-title p {
+        font-size: 12.5px;
+    }
+}
+
+
+/*==============================================================================
+    28. TOUCH DEVICES
+==============================================================================*/
+
+@media (hover: none) {
+
+    .page-hero:hover
+    .page-hero-image img {
+        transform: scale(1.03);
+    }
+}
+
+
+/*==============================================================================
+    29. REDUCED MOTION
+==============================================================================*/
+
+@media (prefers-reduced-motion: reduce) {
+
+    .page-hero-image img {
+        transition: none;
+        transform: none;
+    }
+}
+
+
+/*==============================================================================
+    30. OVERFLOW SAFETY
+==============================================================================*/
+
+@media (max-width: 768px) {
+
+    .page-hero,
+    .blinds-intro {
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: clip;
+    }
+}
+
+
+@supports not (overflow-x: clip) {
+
+    .page-hero,
+    .blinds-intro {
+        overflow-x: hidden;
+    }
+}
+
+
+/*==============================================================================
+    31. PRINT
+==============================================================================*/
+
+@media print {
+
+    .page-hero {
+        min-height: auto;
+        overflow: visible;
+    }
+
+
+    .page-hero-image {
+        position: relative;
+        height: 300px;
+    }
+
+
+    .page-overlay {
+        display: none;
+    }
+
+
+    .page-hero-content {
+        padding: 35px 0;
+    }
+
+
+        .page-hero-content h1 {
+            color: #000;
+        }
+
+
+        .page-hero-content p {
+            color: #000;
+        }
+}
+
+
+/*==============================================================================
+    END — BLINDS.CSS PART 01
+==============================================================================*/
+/*==============================================================================
+    GIS CURTAIN DÉCOR
+    BLINDS.CSS — PART 02
+    FULL CORRECTED PRODUCT SECTION
+
+    --------------------------------------------------------------------------
+    PRODUCTS
+    • Roller Blinds
+    • Zebra Blinds
+    • Roman Blinds
+    • Vertical Blinds
+    • Venetian Blinds
+
+    LAYOUT
+    • Desktop       = IMAGE | CONTENT
+    • Alternate    = CONTENT | IMAGE
+    • Tablet        = IMAGE / CONTENT
+    • Mobile        = IMAGE / CONTENT
+
+    IMAGE RULE
+    • Source image = 800 × 600
+    • Ratio        = 4 : 3
+    • NO fixed height
+    • Desktop image width = 88%
+    • Tablet image width  = 82%
+    • Mobile image width  = 88%
+
+    IMPORTANT
+    --------------------------------------------------------------------------
+    DO NOT add another .blind-product-image img height rule after this part.
+==============================================================================*/
+
+
+/*==============================================================================
+    17. PRODUCT SECTION
+==============================================================================*/
+
+.blind-product {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: var(--white);
+    box-sizing: border-box;
+    overflow-x: clip;
+}
+
+
+    /*==============================================================================
+    18. ALTERNATE PRODUCT BACKGROUND
+==============================================================================*/
+
+    .blind-product:nth-of-type(even) {
+        background: var(--light);
+    }
+
+
+.blind-product-alt {
+    background: var(--light);
+}
+
+
+/*==============================================================================
+    19. PRODUCT CONTAINER
+==============================================================================*/
+
+.blind-product > .container {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+
+/*==============================================================================
+    20. PRODUCT GRID
+==============================================================================*/
+
+.blind-product-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 45px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/*==============================================================================
+    21. ALTERNATE PRODUCT LAYOUT
+==============================================================================*/
+
+/*
+    NORMAL
+
+        IMAGE | CONTENT
+
+
+    ALTERNATE
+
+        CONTENT | IMAGE
+*/
+
+.blind-product-alt
+.blind-product-grid {
+    direction: rtl;
+}
+
+
+    .blind-product-alt
+    .blind-product-grid > * {
+        direction: ltr;
+    }
+
+
+/*==============================================================================
+    22. PRODUCT IMAGE WRAPPER
+==============================================================================*/
+
+/*
+    IMPORTANT
+
+    The image wrapper is deliberately smaller than the full grid column.
+
+    This prevents the Blinds page from looking oversized compared with
+    the Curtain page.
+
+    Desktop:
+        88%
+
+    Tablet:
+        82%
+
+    Mobile:
+        88%
+*/
+
+.blind-product-image {
+    position: relative;
+    width: 88%;
+    max-width: 620px;
+    min-width: 0;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    background: var(--light);
+    box-shadow: var(--shadow-md);
+    isolation: isolate;
+    box-sizing: border-box;
+}
+
+
+    /*==============================================================================
+    23. PRODUCT IMAGE
+==============================================================================*/
+
+    /*
+    SOURCE IMAGE:
+
+        800 × 600
+
+    RATIO:
+
+        4 : 3
+
+    IMPORTANT:
+
+        height: auto
+
+    NO:
+
+        height: 600px;
+        height: 500px;
+        height: 430px;
+        height: 255px;
+        height: 220px;
+        height: 200px;
+*/
+
+    .blind-product-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        object-position: center;
+        vertical-align: middle;
+        transition: transform .65s ease;
+    }
+
+
+    /*==============================================================================
+    24. PRODUCT IMAGE OVERLAY
+==============================================================================*/
+
+    .blind-product-image::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background: linear-gradient( to bottom, transparent 62%, rgba(0,0,0,.10) );
+    }
+
+
+/*==============================================================================
+    25. PRODUCT IMAGE HOVER
+==============================================================================*/
+
+@media (hover: hover) {
+
+    .blind-product-image:hover img {
+        transform: scale(1.04);
+    }
+}
+
+
+/*==============================================================================
+    26. PRODUCT BADGE
+==============================================================================*/
+
+.blind-product-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 8px 13px;
+    border-radius: 50px;
+    background: rgba(255,255,255,.95);
+    color: var(--secondary);
+    box-shadow: 0 8px 22px rgba(0,0,0,.14);
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: .25px;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+
+    /*==============================================================================
+    27. BADGE ICON
+==============================================================================*/
+
+    .blind-product-badge i {
+        color: var(--primary);
+        font-size: 11px;
+    }
+
+
+/*==============================================================================
+    28. PRODUCT CONTENT
+==============================================================================*/
+
+.blind-product-content {
+    width: 100%;
+    max-width: 620px;
+    min-width: 0;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+
+    /*==============================================================================
+    29. PRODUCT SECTION TAG
+==============================================================================*/
+
+    .blind-product-content .section-tag {
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+
+
+    /*==============================================================================
+    30. PRODUCT TITLE
+==============================================================================*/
+
+    .blind-product-content h2 {
+        width: 100%;
+        margin: 9px 0 14px;
+        color: var(--secondary);
+        font-family: var(--font-heading);
+        font-size: clamp( 2.5rem, 4vw, 3.5rem );
+        font-weight: 500;
+        line-height: 1.1;
+        text-wrap: balance;
+        overflow-wrap: break-word;
+    }
+
+
+    /*==============================================================================
+    31. PRODUCT DESCRIPTION
+==============================================================================*/
+
+    .blind-product-content p {
+        width: 100%;
+        margin: 0 0 11px;
+        color: var(--text);
+        font-size: 14px;
+        line-height: 1.8;
+        overflow-wrap: break-word;
+    }
+
+
+        .blind-product-content p:last-of-type {
+            margin-bottom: 0;
+        }
+
+
+/*==============================================================================
+    32. PRODUCT FEATURES
+==============================================================================*/
+
+.blind-features {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    margin: 16px 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+    /*==============================================================================
+    33. FEATURE ITEM
+==============================================================================*/
+
+    .blind-features li {
+        display: flex;
+        align-items: flex-start;
+        gap: 9px;
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        transition: transform .25s ease;
+    }
+
+
+        /*==============================================================================
+    34. FEATURE ICON
+==============================================================================*/
+
+        .blind-features li i {
+            flex: 0 0 auto;
+            width: 16px;
+            margin-top: 4px;
+            color: var(--primary);
+            font-size: 13px;
+            line-height: 1;
+            transition: transform .25s ease;
+        }
+
+
+        /*==============================================================================
+    35. FEATURE TEXT
+==============================================================================*/
+
+        .blind-features li span {
+            min-width: 0;
+            color: var(--secondary);
+            font-size: 13.5px;
+            font-weight: 500;
+            line-height: 1.6;
+            overflow-wrap: break-word;
+        }
+
+
+/*==============================================================================
+    36. FEATURE HOVER
+==============================================================================*/
+
+@media (hover: hover) {
+
+    .blind-features li:hover {
+        transform: translateX(4px);
+    }
+
+
+        .blind-features li:hover i {
+            transform: scale(1.05);
+        }
+}
+
+
+/*==============================================================================
+    37. PRODUCT DETAILS
+==============================================================================*/
+
+.blind-product-details {
+    display: grid;
+    grid-template-columns: repeat( 2, minmax(0,1fr) );
+    gap: 10px;
+    width: 100%;
+    margin: 16px 0;
+    box-sizing: border-box;
+}
+
+
+/*==============================================================================
+    38. DETAIL ITEM
+==============================================================================*/
+
+.blind-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
+    padding: 12px;
+    background: rgba( 200, 169, 106, .06 );
+    border: 1px solid rgba( 200, 169, 106, .12 );
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+
+    /*==============================================================================
+    39. DETAIL ICON
+==============================================================================*/
+
+    .blind-detail-item i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        flex: 0 0 36px;
+        border-radius: 50%;
+        background: rgba( 200, 169, 106, .12 );
+        color: var(--primary);
+        font-size: 14px;
+    }
+
+
+    /*==============================================================================
+    40. DETAIL CONTENT
+==============================================================================*/
+
+    .blind-detail-item > div {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+
+    /*==============================================================================
+    41. DETAIL TITLE
+==============================================================================*/
+
+    .blind-detail-item h4 {
+        margin: 0 0 4px;
+        color: var(--secondary);
+        font-family: var(--font-heading);
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.2;
+        overflow-wrap: break-word;
+    }
+
+
+    /*==============================================================================
+    42. DETAIL DESCRIPTION
+==============================================================================*/
+
+    .blind-detail-item p {
+        margin: 0;
+        color: var(--text);
+        font-size: 12px;
+        line-height: 1.6;
+        overflow-wrap: break-word;
+    }
+
+
+/*==============================================================================
+    43. PRODUCT ACTIONS
+==============================================================================*/
+
+.blind-product-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 9px;
+    width: 100%;
+    margin-top: 15px;
+    box-sizing: border-box;
+}
+
+
+    /*==============================================================================
+    44. PRODUCT BUTTONS
+==============================================================================*/
+
+    .blind-product-actions .btn-primary,
+    .blind-product-actions .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-width: 170px;
+        min-height: 47px;
+        box-sizing: border-box;
+    }
+
+
+    /*==============================================================================
+    45. PRIMARY BUTTON
+==============================================================================*/
+
+    .blind-product-actions .btn-primary {
+        box-shadow: 0 8px 20px rgba( 200, 169, 106, .16 );
+    }
+
+
+    /*==============================================================================
+    46. SECONDARY BUTTON
+==============================================================================*/
+
+    .blind-product-actions .btn-secondary {
+        border: 1px solid var(--primary);
+    }
+
+
+/*==============================================================================
+    47. PRODUCT DIVIDER
+==============================================================================*/
+
+.blind-product + .blind-product {
+    border-top: 1px solid rgba( 200, 169, 106, .08 );
+}
+
+
+/*==============================================================================
+    48. LARGE DESKTOP
+==============================================================================*/
+
+@media (min-width: 1200px) {
+
+    .blind-product-grid {
+        gap: 50px;
+    }
+
+
+    .blind-product-image {
+        width: 86%;
+        max-width: 600px;
+    }
+
+
+    .blind-product-content {
+        max-width: 620px;
+    }
+
+
+        .blind-product-content h2 {
+            font-size: 3.5rem;
+        }
+}
+
+
+/*==============================================================================
+    49. LARGE TABLET
+==============================================================================*/
+
+@media (max-width: 1100px) {
+
+    .blind-product-grid {
+        gap: 32px;
+    }
+
+
+    .blind-product-image {
+        width: 84%;
+        max-width: 560px;
+    }
+
+
+    .blind-product-content h2 {
+        font-size: 2.9rem;
+    }
+
+
+    .blind-product-content p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+
+    .blind-features {
+        gap: 8px;
+        margin: 15px 0;
+    }
+
+
+        .blind-features li span {
+            font-size: 13.2px;
+        }
+
+
+    .blind-product-actions .btn-primary,
+    .blind-product-actions .btn-secondary {
+        min-width: 160px;
+    }
+}
+
+
+/*==============================================================================
+    50. TABLET
+==============================================================================*/
+
+@media (max-width: 992px) {
+
+    .blind-product {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+
+    .blind-product-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 100%;
+    }
+
+
+    /*----------------------------------------------------------------------
+        ALTERNATE LAYOUT → NORMAL STACK
+    ----------------------------------------------------------------------*/
+
+    .blind-product-alt
+    .blind-product-grid {
+        direction: ltr;
+    }
+
+
+    /*----------------------------------------------------------------------
+        PRODUCT IMAGE
+    ----------------------------------------------------------------------*/
+
+    .blind-product-image {
+        width: 82%;
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /*----------------------------------------------------------------------
+        PRODUCT CONTENT
+    ----------------------------------------------------------------------*/
+
+    .blind-product-content {
+        width: 100%;
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+        .blind-product-content h2 {
+            font-size: 2.7rem;
+        }
+
+
+    .blind-product-details {
+        grid-template-columns: repeat( 2, minmax(0,1fr) );
+    }
+}
+
+
+/*==============================================================================
+    51. MOBILE
+==============================================================================*/
+
+@media (max-width: 768px) {
+
+    /*----------------------------------------------------------------------
+        SECTION
+    ----------------------------------------------------------------------*/
+
+    .blind-product {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+
+        /*----------------------------------------------------------------------
+        CONTAINER
+    ----------------------------------------------------------------------*/
+
+        .blind-product > .container {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 16px;
+            padding-right: 16px;
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+        }
+
+
+    /*----------------------------------------------------------------------
+        PRODUCT GRID
+    ----------------------------------------------------------------------*/
+
+    .blind-product-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /*----------------------------------------------------------------------
+        ALTERNATE → STACK
+    ----------------------------------------------------------------------*/
+
+    .blind-product-alt
+    .blind-product-grid {
+        direction: ltr;
+    }
+
+
+    /*----------------------------------------------------------------------
+        PRODUCT IMAGE
+    ----------------------------------------------------------------------*/
+
+    .blind-product-image {
+        width: 88%;
+        max-width: 620px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 11px;
+        box-shadow: var(--shadow-sm);
+    }
+
+
+        /*----------------------------------------------------------------------
+        PRODUCT IMAGE — 4:3
+    ----------------------------------------------------------------------*/
+
+        .blind-product-image img {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            object-position: center;
+        }
+
+
+    /*----------------------------------------------------------------------
+        BADGE
+    ----------------------------------------------------------------------*/
+
+    .blind-product-badge {
+        top: 9px;
+        left: 9px;
+        padding: 6px 10px;
+        font-size: 9.5px;
+    }
+
+
+    /*----------------------------------------------------------------------
+        CONTENT
+    ----------------------------------------------------------------------*/
+
+    .blind-product-content {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+
+        .blind-product-content .section-tag {
+            margin-bottom: 4px;
+            font-size: 11px;
+        }
+
+
+        .blind-product-content h2 {
+            margin: 6px 0 10px;
+            font-size: 2rem;
+            line-height: 1.1;
+        }
+
+
+        .blind-product-content p {
+            margin-bottom: 9px;
+            font-size: 13px;
+            line-height: 1.72;
+        }
+
+
+    /*----------------------------------------------------------------------
+        FEATURES
+    ----------------------------------------------------------------------*/
+
+    .blind-features {
+        gap: 7px;
+        margin: 13px 0;
+    }
+
+
+        .blind-features li {
+            gap: 8px;
+        }
+
+
+            .blind-features li i {
+                width: 16px;
+                margin-top: 4px;
+                font-size: 12.5px;
+            }
+
+
+            .blind-features li span {
+                font-size: 12.7px;
+                line-height: 1.6;
+            }
+
+
+    /*----------------------------------------------------------------------
+        DETAILS
+    ----------------------------------------------------------------------*/
+
+    .blind-product-details {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 13px 0;
+    }
+
+
+    .blind-detail-item {
+        width: 100%;
+        padding: 11px;
+    }
+
+
+        .blind-detail-item i {
+            width: 35px;
+            height: 35px;
+            flex-basis: 35px;
+            font-size: 14px;
+        }
+
+
+        .blind-detail-item h4 {
+            font-size: 17px;
+        }
+
+
+        .blind-detail-item p {
+            font-size: 11.8px;
+            line-height: 1.6;
+        }
+
+
+    /*----------------------------------------------------------------------
+        ACTIONS
+    ----------------------------------------------------------------------*/
+
+    .blind-product-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 7px;
+        width: 100%;
+        margin-top: 13px;
+    }
+
+
+        .blind-product-actions .btn-primary,
+        .blind-product-actions .btn-secondary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-width: 0;
+            min-height: 48px;
+        }
+}
+
+
+/*==============================================================================
+    52. SMALL MOBILE
+==============================================================================*/
+
+@media (max-width: 480px) {
+
+    .blind-product > .container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+
+    .blind-product-grid {
+        gap: 14px;
+    }
+
+
+    /*----------------------------------------------------------------------
+        IMAGE — STILL COMPACT
+    ----------------------------------------------------------------------*/
+
+    .blind-product-image {
+        width: 90%;
+        max-width: 560px;
+    }
+
+
+        .blind-product-image img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+        }
+
+
+    /*----------------------------------------------------------------------
+        CONTENT
+    ----------------------------------------------------------------------*/
+
+    .blind-product-content h2 {
+        font-size: 1.85rem;
+    }
+
+
+    .blind-product-content p {
+        font-size: 12.7px;
+        line-height: 1.7;
+    }
+
+
+    /*----------------------------------------------------------------------
+        FEATURES
+    ----------------------------------------------------------------------*/
+
+    .blind-features {
+        gap: 6px;
+        margin: 12px 0;
+    }
+
+
+        .blind-features li span {
+            font-size: 12.5px;
+        }
+
+
+    /*----------------------------------------------------------------------
+        DETAILS
+    ----------------------------------------------------------------------*/
+
+    .blind-detail-item {
+        padding: 10px;
+    }
+
+
+        .blind-detail-item i {
+            width: 34px;
+            height: 34px;
+            flex-basis: 34px;
+        }
+
+
+        .blind-detail-item h4 {
+            font-size: 16.5px;
+        }
+
+
+        .blind-detail-item p {
+            font-size: 11.5px;
+        }
+
+
+    /*----------------------------------------------------------------------
+        BUTTONS
+    ----------------------------------------------------------------------*/
+
+    .blind-product-actions .btn-primary,
+    .blind-product-actions .btn-secondary {
+        min-height: 47px;
+    }
+}
+
+
+/*==============================================================================
+    53. EXTRA SMALL MOBILE
+==============================================================================*/
+
+@media (max-width: 360px) {
+
+    .blind-product > .container {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+
+    .blind-product-grid {
+        gap: 13px;
+    }
+
+
+    .blind-product-image {
+        width: 92%;
+        max-width: 500px;
+    }
+
+
+        .blind-product-image img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+        }
+
+
+    .blind-product-content h2 {
+        font-size: 1.7rem;
+    }
+
+
+    .blind-product-content p {
+        font-size: 12.2px;
+    }
+
+
+    .blind-features li span {
+        font-size: 12px;
+    }
+
+
+    .blind-detail-item h4 {
+        font-size: 16px;
+    }
+
+
+    .blind-detail-item p {
+        font-size: 11.2px;
+    }
+
+
+    .blind-product-actions .btn-primary,
+    .blind-product-actions .btn-secondary {
+        min-height: 46px;
+    }
+}
+
+
+/*==============================================================================
+    54. TOUCH DEVICES
+==============================================================================*/
+
+@media (hover: none) {
+
+    .blind-product-image:hover img {
+        transform: none;
+    }
+
+
+    .blind-features li:hover {
+        transform: none;
+    }
+
+
+        .blind-features li:hover i {
+            transform: none;
+        }
+}
+
+
+/*==============================================================================
+    55. REDUCED MOTION
+==============================================================================*/
+
+@media (prefers-reduced-motion: reduce) {
+
+    .blind-product-image img,
+    .blind-features li,
+    .blind-features li i {
+        transition: none;
+    }
+
+
+    .blind-product-image:hover img {
+        transform: none;
+    }
+
+
+    .blind-features li:hover,
+    .blind-features li:hover i {
+        transform: none;
+    }
+}
+
+
+/*==============================================================================
+    56. OVERFLOW SAFETY
+==============================================================================*/
+
+.blind-product,
+.blind-product-grid,
+.blind-product-image,
+.blind-product-content,
+.blind-product-details,
+.blind-product-actions {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+    /*==============================================================================
+    57. FINAL PRODUCT IMAGE GUARD
+==============================================================================*/
+
+    /*
+    FINAL RULE:
+
+    Product images ALWAYS remain:
+
+        width  = responsive
+        height = auto
+        ratio  = 4 : 3
+
+    There is intentionally NO fixed height here.
+*/
+
+    .blind-product-image img {
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+
+/*==============================================================================
+    END — BLINDS.CSS PART 02
+==============================================================================*/
+/*==============================================================================
+    GIS CURTAIN DÉCOR
+    BLINDS.CSS — PART 03
+    FULL CORRECTED VERSION
+
+    --------------------------------------------------------------------------
+    SHOWCASE + GALLERY
+
+    • Vertical Blinds Project Showcase
+    • Showcase Images
+    • Showcase Content
+    • Main Gallery
+    • Mini Gallery
+    • Desktop
+    • Large Tablet
+    • Tablet
+    • Mobile
+    • Small Mobile
+    • Extra Small Mobile
+    • Touch Devices
+    • Reduced Motion
+
+    IMPORTANT
+    --------------------------------------------------------------------------
+    PART 01 = HERO + INTRO
+    PART 02 = PRODUCT SECTIONS + PRODUCT IMAGES
+    PART 03 = SHOWCASE + GALLERY
+    PART 04 = BENEFITS + COLLECTION + CTA
+    PART 05 = FINAL SAFETY
+
+    THIS PART DOES NOT STYLE:
+    • .blind-product-image
+    • .blind-product-image img
+    • Product section layout
+==============================================================================*/
+
+
+/*==============================================================================
+    58. SHOWCASE SECTION
+==============================================================================*/
+
+.blind-showcase {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: var(--light);
+    box-sizing: border-box;
+    overflow-x: clip;
+}
+
+
+    /*==============================================================================
+    59. SHOWCASE CONTAINER
+==============================================================================*/
+
+    .blind-showcase > .container {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+
+/*==============================================================================
+    60. SHOWCASE GRID
+==============================================================================*/
+
+.blind-showcase-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 35px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/*==============================================================================
+    61. SHOWCASE CONTENT
+==============================================================================*/
+
+.blind-showcase-content {
+    width: 100%;
+    max-width: 620px;
+    min-width: 0;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+
+    /*==============================================================================
+    62. SHOWCASE SECTION TAG
+==============================================================================*/
+
+    .blind-showcase-content .section-tag {
+        display: inline-block;
+        margin-bottom: 7px;
+    }
+
+
+    /*==============================================================================
+    63. SHOWCASE TITLE
+==============================================================================*/
+
+    .blind-showcase-content h2 {
+        width: 100%;
+        margin: 10px 0 14px;
+        color: var(--secondary);
+        font-family: var(--font-heading);
+        font-size: clamp( 2.3rem, 4vw, 3.4rem );
+        font-weight: 500;
+        line-height: 1.12;
+        text-wrap: balance;
+        overflow-wrap: break-word;
+    }
+
+
+    /*==============================================================================
+    64. SHOWCASE DESCRIPTION
+==============================================================================*/
+
+    .blind-showcase-content p {
+        width: 100%;
+        margin: 0 0 14px;
+        color: var(--text);
+        font-size: 14px;
+        line-height: 1.85;
+        overflow-wrap: break-word;
+    }
+
+
+    /*==============================================================================
+    65. SHOWCASE BUTTON
+==============================================================================*/
+
+    .blind-showcase-content .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-width: 180px;
+        min-height: 47px;
+        margin-top: 8px;
+        box-sizing: border-box;
+    }
+
+
+/*==============================================================================
+    66. SHOWCASE IMAGES
+==============================================================================*/
+
+.blind-showcase-images {
+    display: grid;
+    grid-template-columns: repeat( 2, minmax(0,1fr) );
+    gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+
+    /*==============================================================================
+    67. SHOWCASE FIGURE
+==============================================================================*/
+
+    .blind-showcase-images figure {
+        position: relative;
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        overflow: hidden;
+        border-radius: var(--radius);
+        background: var(--white);
+        box-shadow: var(--shadow-sm);
+        aspect-ratio: 4 / 3;
+        box-sizing: border-box;
+    }
+
+
+        /*==============================================================================
+    68. SHOWCASE IMAGE
+==============================================================================*/
+
+        .blind-showcase-images figure img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            object-position: center;
+            vertical-align: middle;
+            transition: transform .6s ease;
+        }
+
+
+/*==============================================================================
+    69. SHOWCASE IMAGE HOVER
+==============================================================================*/
+
+@media (hover: hover) {
+
+    .blind-showcase-images figure:hover img {
+        transform: scale(1.05);
+    }
+}
+
+
+/*==============================================================================
+    70. GALLERY SECTION
+==============================================================================*/
+
+.blind-gallery-section {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: var(--white);
+    box-sizing: border-box;
+    overflow-x: clip;
+}
+
+
+    /*==============================================================================
+    71. GALLERY CONTAINER
+==============================================================================*/
+
+    .blind-gallery-section > .container {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+
+    /*==============================================================================
+    72. GALLERY SECTION TITLE
+==============================================================================*/
+
+    .blind-gallery-section .section-title {
+        width: min(100%, 800px);
+        margin: 0 auto 18px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+
+        /*==============================================================================
+    73. GALLERY TITLE
+==============================================================================*/
+
+        .blind-gallery-section .section-title h2 {
+            width: 100%;
+            margin: 0 0 10px;
+            text-wrap: balance;
+            overflow-wrap: break-word;
+        }
+
+
+        /*==============================================================================
+    74. GALLERY DESCRIPTION
+==============================================================================*/
+
+        .blind-gallery-section .section-title p {
+            width: 100%;
+            max-width: 720px;
+            margin: 0 auto;
+            color: var(--text);
+            font-size: 14px;
+            line-height: 1.85;
+            overflow-wrap: break-word;
+        }
+
+
+/*==============================================================================
+    75. MAIN GALLERY GRID
+==============================================================================*/
+
+.blind-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat( 3, minmax(0,1fr) );
+    gap: 16px;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 18px;
+    box-sizing: border-box;
+}
+
+
+/*==============================================================================
+    76. MAIN GALLERY ITEM
+==============================================================================*/
+
+.blind-gallery-item {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--light);
+    box-shadow: var(--shadow-sm);
+    aspect-ratio: 4 / 3;
+    box-sizing: border-box;
+}
+
+
+    /*==============================================================================
+    77. MAIN GALLERY IMAGE
+==============================================================================*/
+
+    .blind-gallery-item img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        object-position: center;
+        vertical-align: middle;
+        transition: transform .6s ease, filter .6s ease;
+    }
+
+
+    /*==============================================================================
+    78. GALLERY OVERLAY
+==============================================================================*/
+
+    .blind-gallery-item::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background: linear-gradient( to top, rgba(0,0,0,.50), transparent 58% );
+    }
+
+
+    /*==============================================================================
+    79. GALLERY CAPTION
+==============================================================================*/
+
+    .blind-gallery-item figcaption {
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        bottom: 13px;
+        z-index: 2;
+        margin: 0;
+        color: var(--white);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.4;
+        text-shadow: 0 1px 4px rgba(0,0,0,.25);
+        overflow-wrap: break-word;
+        box-sizing: border-box;
+    }
+
+
+/*==============================================================================
+    80. GALLERY HOVER
+==============================================================================*/
+
+@media (hover: hover) {
+
+    .blind-gallery-item:hover img {
+        transform: scale(1.06);
+        filter: brightness(.84);
+    }
+}
+
+
+/*==============================================================================
+    81. MINI GALLERY
+==============================================================================*/
+
+.blind-mini-gallery {
+    display: grid;
+    grid-template-columns: repeat( 3, minmax(0,1fr) );
+    gap: 16px;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 18px;
+    box-sizing: border-box;
+}
+
+
+/*==============================================================================
+    82. MINI GALLERY CARD
+==============================================================================*/
+
+.blind-gallery-card {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--light);
+    box-shadow: var(--shadow-sm);
+    aspect-ratio: 4 / 3;
+    box-sizing: border-box;
+}
+
+
+    /*==============================================================================
+    83. MINI GALLERY IMAGE
+==============================================================================*/
+
+    .blind-gallery-card img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        object-position: center;
+        vertical-align: middle;
+        transition: transform .6s ease;
+    }
+
+
+/*==============================================================================
+    84. MINI GALLERY HOVER
+==============================================================================*/
+
+@media (hover: hover) {
+
+    .blind-gallery-card:hover img {
+        transform: scale(1.05);
+    }
+}
+
+
+/*==============================================================================
+    85. LARGE TABLET
+==============================================================================*/
+
+@media (max-width: 1100px) {
+
+    .blind-showcase-grid {
+        gap: 30px;
+    }
+
+
+    .blind-showcase-content h2 {
+        font-size: 3rem;
+    }
+
+
+    .blind-gallery-grid {
+        grid-template-columns: repeat( 3, minmax(0,1fr) );
+        gap: 13px;
+    }
+
+
+    .blind-mini-gallery {
+        gap: 13px;
+    }
+}
+
+
+/*==============================================================================
+    86. TABLET
+==============================================================================*/
+
+@media (max-width: 992px) {
+
+    /*----------------------------------------------------------------------
+        SHOWCASE
+    ----------------------------------------------------------------------*/
+
+    .blind-showcase {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+
+    .blind-showcase-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 100%;
+    }
+
+
+    .blind-showcase-images {
+        width: 100%;
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+        order: 1;
+    }
+
+
+    .blind-showcase-content {
+        width: 100%;
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+        order: 2;
+    }
+
+
+    /*----------------------------------------------------------------------
+        GALLERY
+    ----------------------------------------------------------------------*/
+
+    .blind-gallery-grid {
+        grid-template-columns: repeat( 2, minmax(0,1fr) );
+    }
+
+
+    .blind-mini-gallery {
+        grid-template-columns: repeat( 2, minmax(0,1fr) );
+    }
+}
+
+
+/*==============================================================================
+    87. MOBILE
+==============================================================================*/
+
+@media (max-width: 768px) {
+
+    /*----------------------------------------------------------------------
+        SHOWCASE SECTION
+    ----------------------------------------------------------------------*/
+
+    .blind-showcase {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+
+        .blind-showcase > .container {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 16px;
+            padding-right: 16px;
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+        }
+
+
+    /*----------------------------------------------------------------------
+        SHOWCASE GRID
+    ----------------------------------------------------------------------*/
+
+    .blind-showcase-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /*----------------------------------------------------------------------
+        SHOWCASE IMAGES
+    ----------------------------------------------------------------------*/
+
+    .blind-showcase-images {
+        display: grid;
+        grid-template-columns: repeat( 2, minmax(0,1fr) );
+        gap: 9px;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        order: 1;
+    }
+
+
+        .blind-showcase-images figure {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            border-radius: 10px;
+        }
+
+
+            .blind-showcase-images figure img {
+                width: 100%;
+                height: 100%;
+                aspect-ratio: 4 / 3;
+                object-fit: cover;
+            }
+
+
+    /*----------------------------------------------------------------------
+        SHOWCASE CONTENT
+    ----------------------------------------------------------------------*/
+
+    .blind-showcase-content {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        order: 2;
+    }
+
+
+        .blind-showcase-content .section-tag {
+            margin-bottom: 4px;
+            font-size: 11px;
+        }
+
+
+        .blind-showcase-content h2 {
+            margin: 7px 0 11px;
+            font-size: 2rem;
+            line-height: 1.1;
+        }
+
+
+        .blind-showcase-content p {
+            margin-bottom: 10px;
+            font-size: 13.5px;
+            line-height: 1.75;
+        }
+
+
+        /*----------------------------------------------------------------------
+        SHOWCASE BUTTON
+    ----------------------------------------------------------------------*/
+
+        .blind-showcase-content .btn-primary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-width: 0;
+            min-height: 48px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+
+    /*----------------------------------------------------------------------
+        GALLERY SECTION
+    ----------------------------------------------------------------------*/
+
+    .blind-gallery-section {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+
+        .blind-gallery-section > .container {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 16px;
+            padding-right: 16px;
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+        }
+
+
+        /*----------------------------------------------------------------------
+        GALLERY HEADER
+    ----------------------------------------------------------------------*/
+
+        .blind-gallery-section .section-title {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto 15px;
+            text-align: center;
+        }
+
+
+            .blind-gallery-section .section-title h2 {
+                margin-bottom: 9px;
+                font-size: 2rem;
+                line-height: 1.15;
+            }
+
+
+            .blind-gallery-section .section-title p {
+                width: 100%;
+                max-width: 100%;
+                font-size: 13.5px;
+                line-height: 1.75;
+            }
+
+
+    /*----------------------------------------------------------------------
+        MAIN GALLERY
+    ----------------------------------------------------------------------*/
+
+    .blind-gallery-grid {
+        display: grid;
+        grid-template-columns: repeat( 2, minmax(0,1fr) );
+        gap: 9px;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+
+    .blind-gallery-item {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        border-radius: 10px;
+    }
+
+
+        .blind-gallery-item figcaption {
+            left: 11px;
+            right: 11px;
+            bottom: 9px;
+            font-size: 11px;
+        }
+
+
+    /*----------------------------------------------------------------------
+        MINI GALLERY
+    ----------------------------------------------------------------------*/
+
+    .blind-mini-gallery {
+        display: grid;
+        grid-template-columns: repeat( 2, minmax(0,1fr) );
+        gap: 9px;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+
+    .blind-gallery-card {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        border-radius: 9px;
+    }
+}
+
+
+/*==============================================================================
+    88. SMALL MOBILE
+==============================================================================*/
+
+@media (max-width: 480px) {
+
+    .blind-showcase > .container,
+    .blind-gallery-section > .container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+
+    /*----------------------------------------------------------------------
+        SHOWCASE
+    ----------------------------------------------------------------------*/
+
+    .blind-showcase-grid {
+        gap: 14px;
+    }
+
+
+    .blind-showcase-images {
+        gap: 7px;
+    }
+
+
+        .blind-showcase-images figure {
+            border-radius: 9px;
+        }
+
+
+    .blind-showcase-content h2 {
+        font-size: 1.85rem;
+    }
+
+
+    .blind-showcase-content p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+
+    /*----------------------------------------------------------------------
+        GALLERY
+    ----------------------------------------------------------------------*/
+
+    .blind-gallery-section .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+
+    .blind-gallery-section .section-title p {
+        font-size: 13px;
+    }
+
+
+    .blind-gallery-grid {
+        gap: 8px;
+        margin-top: 13px;
+    }
+
+
+    .blind-gallery-item {
+        border-radius: 9px;
+    }
+
+
+        .blind-gallery-item figcaption {
+            left: 9px;
+            right: 9px;
+            bottom: 8px;
+            font-size: 10px;
+        }
+
+
+    .blind-mini-gallery {
+        gap: 8px;
+        margin-top: 13px;
+    }
+
+
+    .blind-gallery-card {
+        border-radius: 8px;
+    }
+}
+
+
+/*==============================================================================
+    89. EXTRA SMALL MOBILE
+==============================================================================*/
+
+@media (max-width: 360px) {
+
+    /*----------------------------------------------------------------------
+        SHOWCASE
+    ----------------------------------------------------------------------*/
+
+    .blind-showcase-images {
+        gap: 6px;
+    }
+
+
+    .blind-showcase-content h2 {
+        font-size: 1.7rem;
+    }
+
+
+    .blind-showcase-content p {
+        font-size: 12.5px;
+    }
+
+
+    /*----------------------------------------------------------------------
+        GALLERY
+    ----------------------------------------------------------------------*/
+
+    .blind-gallery-section .section-title h2 {
+        font-size: 1.7rem;
+    }
+
+
+    .blind-gallery-section .section-title p {
+        font-size: 12.5px;
+    }
+
+
+    .blind-gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+
+    .blind-gallery-item {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+    }
+
+
+        .blind-gallery-item figcaption {
+            left: 9px;
+            right: 9px;
+            bottom: 8px;
+            font-size: 10.5px;
+        }
+
+
+    .blind-mini-gallery {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+
+    .blind-gallery-card {
+        aspect-ratio: 4 / 3;
+    }
+}
+
+
+/*==============================================================================
+    90. TOUCH DEVICES
+==============================================================================*/
+
+@media (hover: none) {
+
+    .blind-showcase-images figure:hover img {
+        transform: none;
+    }
+
+
+    .blind-gallery-item:hover img {
+        transform: none;
+        filter: none;
+    }
+
+
+    .blind-gallery-card:hover img {
+        transform: none;
+    }
+}
+
+
+/*==============================================================================
+    91. REDUCED MOTION
+==============================================================================*/
+
+@media (prefers-reduced-motion: reduce) {
+
+    .blind-showcase-images img,
+    .blind-gallery-item img,
+    .blind-gallery-card img {
+        transition: none;
+    }
+
+
+    .blind-showcase-images figure:hover img,
+    .blind-gallery-item:hover img,
+    .blind-gallery-card:hover img {
+        transform: none;
+    }
+}
+
+
+/*==============================================================================
+    92. SHOWCASE / GALLERY OVERFLOW SAFETY
+==============================================================================*/
+
+.blind-showcase,
+.blind-showcase-grid,
+.blind-showcase-images,
+.blind-gallery-section,
+.blind-gallery-grid,
+.blind-mini-gallery {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+    .blind-showcase *,
+    .blind-gallery-section * {
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+
+    /*==============================================================================
+    93. IMAGE SAFETY
+==============================================================================*/
+
+    .blind-showcase-images img,
+    .blind-gallery-item img,
+    .blind-gallery-card img {
+        max-width: 100%;
+    }
+
+
+/*==============================================================================
+    94. PRINT
+==============================================================================*/
+
+@media print {
+
+    .blind-showcase,
+    .blind-gallery-section {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        overflow: visible;
+        break-inside: avoid;
+    }
+
+
+    .blind-showcase-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .blind-gallery-grid {
+        grid-template-columns: repeat( 3, 1fr );
+    }
+
+
+    .blind-mini-gallery {
+        grid-template-columns: repeat( 3, 1fr );
+    }
+
+
+    .blind-showcase-images figure,
+    .blind-gallery-item,
+    .blind-gallery-card {
+        box-shadow: none;
+    }
+
+
+        .blind-showcase-images img,
+        .blind-gallery-item img,
+        .blind-gallery-card img {
+            transform: none !important;
+            filter: none !important;
+        }
+}
+
+
+/*==============================================================================
+    END — BLINDS.CSS PART 03
+==============================================================================*/
+/*==============================================================================
+    GIS CURTAIN DÉCOR
+    BLINDS.CSS — PART 04
+    FULL CORRECTED VERSION
+
+    --------------------------------------------------------------------------
+    BENEFITS + COLLECTION + CTA
+
+    • Why Choose GIS Curtain Décor
+    • Benefit Cards
+    • Benefit Icons
+    • Blind Collection
+    • Collection Cards
+    • Collection Images
+    • Collection Content
+    • Explore Links
+    • Free Quotation CTA
+    • Desktop
+    • Tablet
+    • Mobile
+    • Small Mobile
+    • Extra Small Mobile
+    • Touch Devices
+    • Reduced Motion
+
+    IMPORTANT
+    --------------------------------------------------------------------------
+    PART 01 → HERO + INTRO
+    PART 02 → PRODUCT SECTIONS + PRODUCT IMAGES
+    PART 03 → SHOWCASE + GALLERY
+    PART 04 → BENEFITS + COLLECTION + CTA
+    PART 05 → FINAL SAFETY
+
+    THIS PART DOES NOT STYLE:
+    • .blind-product-image
+    • .blind-product-image img
+    • .blind-showcase-images
+    • .blind-gallery-item
+==============================================================================*/
+
+
+/*==============================================================================
+    95. BENEFITS SECTION
+==============================================================================*/
+
+.blind-benefits {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: var(--light);
+    box-sizing: border-box;
+    overflow-x: clip;
+}
+
+
+    /*==============================================================================
+    96. BENEFITS CONTAINER
+==============================================================================*/
+
+    .blind-benefits > .container {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+
+    /*==============================================================================
+    97. BENEFITS SECTION TITLE
+==============================================================================*/
+
+    .blind-benefits .section-title {
+        width: min(100%, 820px);
+        margin: 0 auto;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+
+        /*==============================================================================
+    98. BENEFITS TITLE
+==============================================================================*/
+
+        .blind-benefits .section-title h2 {
+            width: 100%;
+            margin: 0 auto 11px;
+            text-align: center;
+            text-wrap: balance;
+            overflow-wrap: break-word;
+        }
+
+
+        /*==============================================================================
+    99. BENEFITS DESCRIPTION
+==============================================================================*/
+
+        .blind-benefits .section-title p {
+            width: 100%;
+            max-width: 720px;
+            margin: 0 auto;
+            color: var(--text);
+            font-size: 14px;
+            line-height: 1.8;
+            text-align: center;
+            overflow-wrap: break-word;
+        }
+
+
+/*==============================================================================
+    100. BENEFITS GRID
+==============================================================================*/
+
+.blind-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat( 4, minmax(0,1fr) );
+    gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 18px;
+    box-sizing: border-box;
+}
+
+
+/*==============================================================================
+    101. BENEFIT CARD
+==============================================================================*/
+
+.blind-benefit-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    padding: 22px 16px;
+    background: var(--white);
+    border: 1px solid rgba( 200, 169, 106, .13 );
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+
+    /*==============================================================================
+    102. BENEFIT CARD TOP LINE
+==============================================================================*/
+
+    .blind-benefit-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: var(--primary);
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform .3s ease;
+    }
+
+
+/*==============================================================================
+    103. BENEFIT ICON
+==============================================================================*/
+
+.blind-benefit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    flex: 0 0 56px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    background: rgba( 200, 169, 106, .11 );
+    color: var(--primary);
+    font-size: 20px;
+    box-sizing: border-box;
+    transition: transform .3s ease, background .3s ease, color .3s ease;
+}
+
+
+/*==============================================================================
+    104. BENEFIT TITLE
+==============================================================================*/
+
+.blind-benefit-card h3 {
+    width: 100%;
+    margin: 0 0 8px;
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+}
+
+
+/*==============================================================================
+    105. BENEFIT DESCRIPTION
+==============================================================================*/
+
+.blind-benefit-card p {
+    width: 100%;
+    margin: 0;
+    color: var(--text);
+    font-size: 12.7px;
+    line-height: 1.7;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+
+/*==============================================================================
+    106. BENEFIT HOVER
+==============================================================================*/
+
+@media (hover: hover) {
+
+    .blind-benefit-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba( 200, 169, 106, .30 );
+        box-shadow: 0 15px 35px rgba(0,0,0,.10);
+    }
+
+
+        .blind-benefit-card:hover::before {
+            transform: scaleX(1);
+        }
+
+
+        .blind-benefit-card:hover
+        .blind-benefit-icon {
+            transform: translateY(-2px) scale(1.04);
+            background: rgba( 200, 169, 106, .17 );
+        }
+}
+
+
+/*==============================================================================
+    107. COLLECTION SECTION
+==============================================================================*/
+
+.blind-collection {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: var(--white);
+    box-sizing: border-box;
+    overflow-x: clip;
+}
+
+
+    /*==============================================================================
+    108. COLLECTION CONTAINER
+==============================================================================*/
+
+    .blind-collection > .container {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+
+    /*==============================================================================
+    109. COLLECTION SECTION TITLE
+==============================================================================*/
+
+    .blind-collection .section-title {
+        width: min(100%, 820px);
+        margin: 0 auto;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+
+        /*==============================================================================
+    110. COLLECTION TITLE
+==============================================================================*/
+
+        .blind-collection .section-title h2 {
+            width: 100%;
+            margin: 0 auto 11px;
+            text-align: center;
+            text-wrap: balance;
+            overflow-wrap: break-word;
+        }
+
+
+        /*==============================================================================
+    111. COLLECTION DESCRIPTION
+==============================================================================*/
+
+        .blind-collection .section-title p {
+            width: 100%;
+            max-width: 720px;
+            margin: 0 auto;
+            color: var(--text);
+            font-size: 14px;
+            line-height: 1.8;
+            text-align: center;
+            overflow-wrap: break-word;
+        }
+
+
+/*==============================================================================
+    112. COLLECTION GRID
+==============================================================================*/
+
+.blind-collection-grid {
+    display: grid;
+    grid-template-columns: repeat( 3, minmax(0,1fr) );
+    gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 18px;
+    box-sizing: border-box;
+}
+
+
+/*==============================================================================
+    113. COLLECTION CARD
+==============================================================================*/
+
+.blind-collection-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid rgba( 200, 169, 106, .14 );
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    box-sizing: border-box;
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+
+/*==============================================================================
+    114. COLLECTION IMAGE
+==============================================================================*/
+
+.blind-collection-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--light);
+    box-sizing: border-box;
+}
+
+
+    /*==============================================================================
+    115. COLLECTION IMAGE
+==============================================================================*/
+
+    .blind-collection-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        object-position: center;
+        vertical-align: middle;
+        transition: transform .6s ease;
+    }
+
+
+    /*==============================================================================
+    116. COLLECTION IMAGE OVERLAY
+==============================================================================*/
+
+    .blind-collection-image::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient( to bottom, transparent 55%, rgba(0,0,0,.14) );
+    }
+
+
+/*==============================================================================
+    117. COLLECTION CONTENT
+==============================================================================*/
+
+.blind-collection-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+
+    /*==============================================================================
+    118. COLLECTION NUMBER
+==============================================================================*/
+
+    .blind-collection-content > span {
+        display: block;
+        margin: 0 0 5px;
+        color: var(--primary);
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 1;
+        letter-spacing: .12em;
+    }
+
+
+    /*==============================================================================
+    119. COLLECTION TITLE
+==============================================================================*/
+
+    .blind-collection-content h3 {
+        width: 100%;
+        margin: 0 0 7px;
+        color: var(--secondary);
+        font-family: var(--font-heading);
+        font-size: 21px;
+        font-weight: 600;
+        line-height: 1.2;
+        text-wrap: balance;
+        overflow-wrap: break-word;
+    }
+
+
+    /*==============================================================================
+    120. COLLECTION DESCRIPTION
+==============================================================================*/
+
+    .blind-collection-content p {
+        width: 100%;
+        margin: 0 0 12px;
+        color: var(--text);
+        font-size: 12.7px;
+        line-height: 1.7;
+        overflow-wrap: break-word;
+    }
+
+
+    /*==============================================================================
+    121. COLLECTION EXPLORE LINK
+==============================================================================*/
+
+    .blind-collection-content a {
+        display: inline-flex;
+        align-items: center;
+        align-self: flex-start;
+        gap: 7px;
+        margin-top: auto;
+        color: var(--secondary);
+        font-size: 12.5px;
+        font-weight: 600;
+        line-height: 1.4;
+        transition: color .25s ease;
+    }
+
+
+        /*==============================================================================
+    122. COLLECTION LINK ICON
+==============================================================================*/
+
+        .blind-collection-content a i {
+            color: var(--primary);
+            font-size: 11px;
+            transition: transform .25s ease;
+        }
+
+
+/*==============================================================================
+    123. COLLECTION HOVER
+==============================================================================*/
+
+@media (hover: hover) {
+
+    .blind-collection-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba( 200, 169, 106, .30 );
+        box-shadow: 0 16px 35px rgba(0,0,0,.10);
+    }
+
+
+        .blind-collection-card:hover
+        .blind-collection-image img {
+            transform: scale(1.045);
+        }
+
+
+    .blind-collection-content a:hover {
+        color: var(--primary);
+    }
+
+
+        .blind-collection-content a:hover i {
+            transform: translateX(4px);
+        }
+}
+
+
+/*==============================================================================
+    124. CTA SECTION
+==============================================================================*/
+
+.blind-cta {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: linear-gradient( 135deg, var(--secondary), #111827 );
+    color: var(--white);
+    box-sizing: border-box;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+
+    /*==============================================================================
+    125. CTA DECORATION
+==============================================================================*/
+
+    .blind-cta::before {
+        content: "";
+        position: absolute;
+        width: 380px;
+        height: 380px;
+        top: -190px;
+        right: -120px;
+        border-radius: 50%;
+        background: rgba( 200, 169, 106, .10 );
+        pointer-events: none;
+        z-index: -1;
+    }
+
+
+    .blind-cta::after {
+        content: "";
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        left: -100px;
+        bottom: -150px;
+        border-radius: 50%;
+        background: rgba( 255, 255, 255, .04 );
+        pointer-events: none;
+        z-index: -1;
+    }
+
+
+    /*==============================================================================
+    126. CTA CONTAINER
+==============================================================================*/
+
+    .blind-cta > .container {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+
+/*==============================================================================
+    127. CTA CONTENT
+==============================================================================*/
+
+.blind-cta-content {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+    /*==============================================================================
+    128. CTA TAG
+==============================================================================*/
+
+    .blind-cta-content .section-tag {
+        display: inline-block;
+        margin-bottom: 5px;
+        color: var(--primary);
+        text-align: center;
+    }
+
+
+    /*==============================================================================
+    129. CTA TITLE
+==============================================================================*/
+
+    .blind-cta-content h2 {
+        width: 100%;
+        max-width: 820px;
+        margin: 8px auto 12px;
+        color: var(--white);
+        font-family: var(--font-heading);
+        font-size: clamp( 2.5rem, 4.5vw, 3.7rem );
+        font-weight: 500;
+        line-height: 1.1;
+        text-align: center;
+        text-wrap: balance;
+        overflow-wrap: break-word;
+    }
+
+
+    /*==============================================================================
+    130. CTA DESCRIPTION
+==============================================================================*/
+
+    .blind-cta-content p {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto 16px;
+        color: rgba( 255, 255, 255, .82 );
+        font-size: 14px;
+        line-height: 1.8;
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+
+/*==============================================================================
+    131. CTA BUTTONS
+==============================================================================*/
+
+.blind-cta-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    margin-top: 14px;
+    box-sizing: border-box;
+}
+
+
+    /*==============================================================================
+    132. CTA BUTTONS
+==============================================================================*/
+
+    .blind-cta-buttons .btn-primary,
+    .blind-cta-buttons .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-width: 190px;
+        min-height: 48px;
+        box-sizing: border-box;
+    }
+
+
+    /*==============================================================================
+    133. CTA SECONDARY
+==============================================================================*/
+
+    .blind-cta-buttons .btn-secondary {
+        border: 1px solid rgba( 255, 255, 255, .30 );
+        color: var(--white);
+        background: rgba( 255, 255, 255, .05 );
+    }
+
+
+/*==============================================================================
+    134. CTA SECONDARY HOVER
+==============================================================================*/
+
+@media (hover: hover) {
+
+    .blind-cta-buttons .btn-secondary:hover {
+        border-color: rgba( 255, 255, 255, .55 );
+        background: rgba( 255, 255, 255, .10 );
+        color: var(--white);
+    }
+}
+
+
+/*==============================================================================
+    135. LARGE TABLET
+==============================================================================*/
+
+@media (max-width: 1100px) {
+
+    .blind-benefits-grid {
+        gap: 10px;
+    }
+
+
+    .blind-benefit-card {
+        padding: 20px 14px;
+    }
+
+
+    .blind-collection-grid {
+        gap: 10px;
+    }
+
+
+    .blind-collection-content {
+        padding: 15px;
+    }
+
+
+    .blind-cta-content {
+        max-width: 800px;
+    }
+}
+
+
+/*==============================================================================
+    136. TABLET
+==============================================================================*/
+
+@media (max-width: 992px) {
+
+    /*----------------------------------------------------------------------
+        BENEFITS
+    ----------------------------------------------------------------------*/
+
+    .blind-benefits {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+
+        .blind-benefits > .container {
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+            box-sizing: border-box;
+        }
+
+
+    .blind-benefits-grid {
+        grid-template-columns: repeat( 2, minmax(0,1fr) );
+        gap: 10px;
+    }
+
+
+    /*----------------------------------------------------------------------
+        COLLECTION
+    ----------------------------------------------------------------------*/
+
+    .blind-collection {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+
+        .blind-collection > .container {
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+            box-sizing: border-box;
+        }
+
+
+    .blind-collection-grid {
+        grid-template-columns: repeat( 2, minmax(0,1fr) );
+        gap: 10px;
+    }
+
+
+    /*----------------------------------------------------------------------
+        CTA
+    ----------------------------------------------------------------------*/
+
+    .blind-cta {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+
+        .blind-cta > .container {
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+            box-sizing: border-box;
+        }
+
+
+    .blind-cta-content {
+        max-width: 760px;
+    }
+
+
+        .blind-cta-content h2 {
+            font-size: 3rem;
+        }
+}
+
+
+/*==============================================================================
+    137. MOBILE
+==============================================================================*/
+
+@media (max-width: 768px) {
+
+    /*----------------------------------------------------------------------
+        BENEFITS
+    ----------------------------------------------------------------------*/
+
+    .blind-benefits > .container,
+    .blind-collection > .container,
+    .blind-cta > .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+
+    .blind-benefits .section-title,
+    .blind-collection .section-title {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+
+        .blind-benefits .section-title h2,
+        .blind-collection .section-title h2 {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto 9px;
+            font-size: 2rem;
+            line-height: 1.15;
+            text-align: center;
+        }
+
+
+        .blind-benefits .section-title p,
+        .blind-collection .section-title p {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            font-size: 13px;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+
+    .blind-benefits-grid {
+        grid-template-columns: repeat( 2, minmax(0,1fr) );
+        gap: 9px;
+        margin-top: 15px;
+    }
+
+
+    .blind-benefit-card {
+        padding: 18px 12px;
+        border-radius: 10px;
+    }
+
+
+    .blind-benefit-icon {
+        width: 48px;
+        height: 48px;
+        flex-basis: 48px;
+        margin-bottom: 9px;
+        font-size: 18px;
+    }
+
+
+    .blind-benefit-card h3 {
+        margin-bottom: 6px;
+        font-size: 17px;
+        line-height: 1.2;
+    }
+
+
+    .blind-benefit-card p {
+        font-size: 11.5px;
+        line-height: 1.6;
+    }
+
+
+    /*----------------------------------------------------------------------
+        COLLECTION
+    ----------------------------------------------------------------------*/
+
+    .blind-collection-grid {
+        grid-template-columns: repeat( 2, minmax(0,1fr) );
+        gap: 9px;
+        margin-top: 15px;
+    }
+
+
+    .blind-collection-card {
+        border-radius: 10px;
+    }
+
+
+    .blind-collection-image {
+        aspect-ratio: 4 / 3;
+    }
+
+
+        .blind-collection-image img {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+        }
+
+
+    .blind-collection-content {
+        padding: 13px;
+    }
+
+
+        .blind-collection-content > span {
+            margin-bottom: 4px;
+            font-size: 9.5px;
+        }
+
+
+        .blind-collection-content h3 {
+            margin-bottom: 6px;
+            font-size: 18px;
+            line-height: 1.2;
+        }
+
+
+        .blind-collection-content p {
+            margin-bottom: 10px;
+            font-size: 11.5px;
+            line-height: 1.6;
+        }
+
+
+        .blind-collection-content a {
+            gap: 6px;
+            font-size: 11.5px;
+        }
+
+
+    /*----------------------------------------------------------------------
+        CTA
+    ----------------------------------------------------------------------*/
+
+    .blind-cta {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+
+    .blind-cta-content {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+
+        .blind-cta-content .section-tag {
+            display: block;
+            width: 100%;
+            margin: 0 auto 5px;
+            text-align: center;
+            font-size: 10.5px;
+        }
+
+
+        .blind-cta-content h2 {
+            width: 100%;
+            max-width: 100%;
+            margin: 7px auto 10px;
+            font-size: 2.05rem;
+            line-height: 1.1;
+            text-align: center;
+        }
+
+
+        .blind-cta-content p {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto 15px;
+            font-size: 13px;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+
+    .blind-cta-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        margin-top: 13px;
+    }
+
+
+        .blind-cta-buttons .btn-primary,
+        .blind-cta-buttons .btn-secondary {
+            width: 100%;
+            min-width: 0;
+            min-height: 48px;
+            box-sizing: border-box;
+        }
+
+
+    /*----------------------------------------------------------------------
+        CTA DECORATION
+    ----------------------------------------------------------------------*/
+
+    .blind-cta::before {
+        width: 280px;
+        height: 280px;
+        top: -150px;
+        right: -110px;
+    }
+
+
+    .blind-cta::after {
+        width: 190px;
+        height: 190px;
+        left: -80px;
+        bottom: -120px;
+    }
+}
+
+
+/*==============================================================================
+    138. SMALL MOBILE
+==============================================================================*/
+
+@media (max-width: 480px) {
+
+    .blind-benefits > .container,
+    .blind-collection > .container,
+    .blind-cta > .container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+
+    /*----------------------------------------------------------------------
+        BENEFITS
+    ----------------------------------------------------------------------*/
+
+    .blind-benefits .section-title h2,
+    .blind-collection .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+
+    .blind-benefits .section-title p,
+    .blind-collection .section-title p {
+        font-size: 12.8px;
+    }
+
+
+    .blind-benefits-grid {
+        gap: 8px;
+        margin-top: 14px;
+    }
+
+
+    .blind-benefit-card {
+        padding: 17px 10px;
+    }
+
+
+    .blind-benefit-icon {
+        width: 44px;
+        height: 44px;
+        flex-basis: 44px;
+        margin-bottom: 8px;
+        font-size: 17px;
+    }
+
+
+    .blind-benefit-card h3 {
+        font-size: 16px;
+    }
+
+
+    .blind-benefit-card p {
+        font-size: 11px;
+        line-height: 1.55;
+    }
+
+
+    /*----------------------------------------------------------------------
+        COLLECTION
+    ----------------------------------------------------------------------*/
+
+    .blind-collection-grid {
+        gap: 8px;
+        margin-top: 14px;
+    }
+
+
+    .blind-collection-content {
+        padding: 11px;
+    }
+
+
+        .blind-collection-content > span {
+            font-size: 9px;
+        }
+
+
+        .blind-collection-content h3 {
+            font-size: 17px;
+        }
+
+
+        .blind-collection-content p {
+            font-size: 11px;
+            line-height: 1.55;
+        }
+
+
+        .blind-collection-content a {
+            font-size: 11px;
+        }
+
+
+    /*----------------------------------------------------------------------
+        CTA
+    ----------------------------------------------------------------------*/
+
+    .blind-cta-content h2 {
+        font-size: 1.85rem;
+    }
+
+
+    .blind-cta-content p {
+        font-size: 12.5px;
+        line-height: 1.65;
+    }
+
+
+    .blind-cta-buttons {
+        gap: 7px;
+        margin-top: 12px;
+    }
+
+
+        .blind-cta-buttons .btn-primary,
+        .blind-cta-buttons .btn-secondary {
+            min-height: 47px;
+        }
+}
+
+
+/*==============================================================================
+    139. EXTRA SMALL MOBILE
+==============================================================================*/
+
+@media (max-width: 360px) {
+
+    /*----------------------------------------------------------------------
+        BENEFITS
+    ----------------------------------------------------------------------*/
+
+    .blind-benefits-grid {
+        gap: 7px;
+    }
+
+
+    .blind-benefit-card {
+        padding: 15px 8px;
+    }
+
+
+    .blind-benefit-icon {
+        width: 40px;
+        height: 40px;
+        flex-basis: 40px;
+        font-size: 16px;
+    }
+
+
+    .blind-benefit-card h3 {
+        font-size: 15px;
+    }
+
+
+    .blind-benefit-card p {
+        font-size: 10.5px;
+    }
+
+
+    /*----------------------------------------------------------------------
+        COLLECTION
+    ----------------------------------------------------------------------*/
+
+    .blind-collection-grid {
+        gap: 7px;
+    }
+
+
+    .blind-collection-content {
+        padding: 10px;
+    }
+
+
+        .blind-collection-content h3 {
+            font-size: 16px;
+        }
+
+
+        .blind-collection-content p {
+            font-size: 10.5px;
+        }
+
+
+        .blind-collection-content a {
+            font-size: 10.5px;
+        }
+
+
+    /*----------------------------------------------------------------------
+        CTA
+    ----------------------------------------------------------------------*/
+
+    .blind-cta-content h2 {
+        font-size: 1.7rem;
+    }
+
+
+    .blind-cta-content p {
+        font-size: 12px;
+    }
+
+
+    .blind-cta-buttons .btn-primary,
+    .blind-cta-buttons .btn-secondary {
+        min-height: 46px;
+    }
+}
+
+
+/*==============================================================================
+    140. TOUCH DEVICES
+==============================================================================*/
+
+@media (hover: none) {
+
+    .blind-benefit-card:hover {
+        transform: none;
+        border-color: rgba( 200, 169, 106, .13 );
+        box-shadow: var(--shadow-sm);
+    }
+
+
+        .blind-benefit-card:hover::before {
+            transform: scaleX(0);
+        }
+
+
+        .blind-benefit-card:hover
+        .blind-benefit-icon {
+            transform: none;
+            background: rgba( 200, 169, 106, .11 );
+            color: var(--primary);
+        }
+
+
+    .blind-collection-card:hover {
+        transform: none;
+        border-color: rgba( 200, 169, 106, .14 );
+        box-shadow: var(--shadow-sm);
+    }
+
+
+        .blind-collection-card:hover
+        .blind-collection-image img {
+            transform: none;
+        }
+
+
+    .blind-collection-content a:hover {
+        color: var(--secondary);
+    }
+
+
+        .blind-collection-content a:hover i {
+            transform: none;
+        }
+
+
+    .blind-cta-buttons .btn-secondary:hover {
+        background: rgba( 255, 255, 255, .05 );
+        border-color: rgba( 255, 255, 255, .30 );
+    }
+}
+
+
+/*==============================================================================
+    141. REDUCED MOTION
+==============================================================================*/
+
+@media (prefers-reduced-motion: reduce) {
+
+    .blind-benefit-card,
+    .blind-benefit-card::before,
+    .blind-benefit-icon,
+    .blind-collection-card,
+    .blind-collection-card::before,
+    .blind-collection-image img,
+    .blind-collection-content a,
+    .blind-collection-content a i,
+    .blind-cta-buttons .btn-secondary {
+        transition: none !important;
+    }
+
+
+        .blind-benefit-card:hover,
+        .blind-collection-card:hover {
+            transform: none !important;
+        }
+
+
+            .blind-benefit-card:hover::before {
+                transform: scaleX(0) !important;
+            }
+
+
+            .blind-benefit-card:hover
+            .blind-benefit-icon {
+                transform: none !important;
+            }
+
+
+            .blind-collection-card:hover
+            .blind-collection-image img {
+                transform: none !important;
+            }
+
+
+        .blind-collection-content a:hover i {
+            transform: none !important;
+        }
+}
+
+
+/*==============================================================================
+    142. FINAL PART 04 WIDTH SAFETY
+==============================================================================*/
+
+.blind-benefits,
+.blind-benefits-grid,
+.blind-collection,
+.blind-collection-grid,
+.blind-cta,
+.blind-cta-content,
+.blind-cta-buttons {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+    .blind-benefits *,
+    .blind-collection *,
+    .blind-cta * {
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+
+/*==============================================================================
+    143. IMAGE SAFETY
+==============================================================================*/
+
+.blind-collection-image img {
+    max-width: 100%;
+}
+
+
+/*==============================================================================
+    144. TEXT SAFETY
+==============================================================================*/
+
+.blind-benefit-card h3,
+.blind-benefit-card p,
+.blind-collection-content h3,
+.blind-collection-content p,
+.blind-cta-content h2,
+.blind-cta-content p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+
+/*==============================================================================
+    145. PRINT
+==============================================================================*/
+
+@media print {
+
+    .blind-benefits,
+    .blind-collection,
+    .blind-cta {
+        overflow: visible;
+        box-shadow: none;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+
+    .blind-benefits-grid {
+        grid-template-columns: repeat( 4, 1fr );
+    }
+
+
+    .blind-collection-grid {
+        grid-template-columns: repeat( 3, 1fr );
+    }
+
+
+    .blind-benefit-card,
+    .blind-collection-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+
+    .blind-collection-image img {
+        transform: none !important;
+    }
+
+
+    .blind-cta {
+        background: var(--white);
+        color: #000;
+    }
+
+
+    .blind-cta-content h2,
+    .blind-cta-content p {
+        color: #000;
+    }
+}
+
+
+/*==============================================================================
+    END — BLINDS.CSS PART 04
+==============================================================================*/
+/*==============================================================================
+    GIS CURTAIN DÉCOR
+    BLINDS.CSS — PART 05
+    FINAL CORRECTED SAFETY / CLEANUP LAYER
+
+    --------------------------------------------------------------------------
+    PART MAP
+    --------------------------------------------------------------------------
+
+    PART 01
+        HERO + INTRO
+
+    PART 02
+        PRODUCT SECTIONS + PRODUCT IMAGES
+
+    PART 03
+        SHOWCASE + GALLERY
+
+    PART 04
+        BENEFITS + COLLECTION + CTA
+
+    PART 05
+        FINAL SAFETY ONLY
+
+
+    --------------------------------------------------------------------------
+    IMPORTANT
+    --------------------------------------------------------------------------
+
+    THIS PART MUST NOT CHANGE THE MAIN LAYOUT.
+
+    NO:
+        • product image sizing
+        • hero sizing
+        • product grid columns
+        • showcase grid columns
+        • gallery columns
+        • benefits columns
+        • collection columns
+        • CTA layout
+        • section spacing
+
+    PART 05 IS ONLY A SAFETY / CLEANUP LAYER.
+==============================================================================*/
+
+
+/*==============================================================================
+    146. GLOBAL BOX SIZING
+==============================================================================*/
+
+.page-hero,
+.page-hero *,
+.blinds-intro,
+.blinds-intro *,
+.blind-product,
+.blind-product *,
+.blind-showcase,
+.blind-showcase *,
+.blind-gallery-section,
+.blind-gallery-section *,
+.blind-benefits,
+.blind-benefits *,
+.blind-collection,
+.blind-collection *,
+.blind-cta,
+.blind-cta * {
+    box-sizing: border-box;
+}
+
+
+/*==============================================================================
+    147. SECTION WIDTH SAFETY
+==============================================================================*/
+
+.page-hero,
+.blinds-intro,
+.blind-product,
+.blind-showcase,
+.blind-gallery-section,
+.blind-benefits,
+.blind-collection,
+.blind-cta {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+    /*==============================================================================
+    148. CONTAINER SAFETY
+==============================================================================*/
+
+    .page-hero > .container,
+    .blinds-intro > .container,
+    .blind-product > .container,
+    .blind-showcase > .container,
+    .blind-gallery-section > .container,
+    .blind-benefits > .container,
+    .blind-collection > .container,
+    .blind-cta > .container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+
+/*==============================================================================
+    149. GRID CHILD SAFETY
+==============================================================================*/
+
+.blind-product-grid > *,
+.blind-showcase-grid > *,
+.blind-showcase-images > *,
+.blind-gallery-grid > *,
+.blind-mini-gallery > *,
+.blind-benefits-grid > *,
+.blind-collection-grid > * {
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+
+/*==============================================================================
+    150. FLEX CHILD SAFETY
+==============================================================================*/
+
+.blind-product-actions > *,
+.blind-features > *,
+.blind-detail-item > *,
+.blind-cta-buttons > * {
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+
+/*==============================================================================
+    151. IMAGE WIDTH SAFETY
+==============================================================================*/
+
+.page-hero img,
+.blinds-intro img,
+.blind-product img,
+.blind-showcase img,
+.blind-gallery-section img,
+.blind-benefits img,
+.blind-collection img,
+.blind-cta img {
+    max-width: 100%;
+}
+
+
+/*==============================================================================
+    152. INLINE IMAGE GAP FIX
+==============================================================================*/
+
+.page-hero-image img,
+.blind-product-image img,
+.blind-showcase-images img,
+.blind-gallery-item img,
+.blind-gallery-card img,
+.blind-collection-image img {
+    vertical-align: middle;
+}
+
+
+/*==============================================================================
+    153. PRODUCT IMAGE SAFETY
+==============================================================================*/
+
+/*
+    IMPORTANT:
+
+    This DOES NOT set width or height.
+
+    Part 02 owns product image sizing.
+
+    We only prevent accidental overflow here.
+*/
+
+.blind-product-image {
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+    .blind-product-image img {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+
+/*==============================================================================
+    154. SHOWCASE IMAGE SAFETY
+==============================================================================*/
+
+.blind-showcase-images {
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+
+    .blind-showcase-images figure {
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+
+        .blind-showcase-images figure img {
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+
+/*==============================================================================
+    155. GALLERY IMAGE SAFETY
+==============================================================================*/
+
+.blind-gallery-grid,
+.blind-mini-gallery {
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+
+.blind-gallery-item,
+.blind-gallery-card {
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+    .blind-gallery-item img,
+    .blind-gallery-card img {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+
+/*==============================================================================
+    156. COLLECTION IMAGE SAFETY
+==============================================================================*/
+
+.blind-collection-image {
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+    .blind-collection-image img {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+
+/*==============================================================================
+    157. TEXT WRAPPING SAFETY
+==============================================================================*/
+
+.page-hero h1,
+.page-hero h2,
+.page-hero h3,
+.page-hero p,
+.blinds-intro h1,
+.blinds-intro h2,
+.blinds-intro h3,
+.blinds-intro p,
+.blind-product h1,
+.blind-product h2,
+.blind-product h3,
+.blind-product h4,
+.blind-product p,
+.blind-showcase h1,
+.blind-showcase h2,
+.blind-showcase h3,
+.blind-showcase h4,
+.blind-showcase p,
+.blind-gallery-section h1,
+.blind-gallery-section h2,
+.blind-gallery-section h3,
+.blind-gallery-section h4,
+.blind-gallery-section p,
+.blind-benefits h1,
+.blind-benefits h2,
+.blind-benefits h3,
+.blind-benefits h4,
+.blind-benefits p,
+.blind-collection h1,
+.blind-collection h2,
+.blind-collection h3,
+.blind-collection h4,
+.blind-collection p,
+.blind-cta h1,
+.blind-cta h2,
+.blind-cta h3,
+.blind-cta h4,
+.blind-cta p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+
+/*==============================================================================
+    158. LONG LINK / URL SAFETY
+==============================================================================*/
+
+.page-hero a,
+.blinds-intro a,
+.blind-product a,
+.blind-showcase a,
+.blind-gallery-section a,
+.blind-benefits a,
+.blind-collection a,
+.blind-cta a {
+    overflow-wrap: anywhere;
+}
+
+
+/*==============================================================================
+    159. BUTTON SAFETY
+==============================================================================*/
+
+.blind-product .btn-primary,
+.blind-product .btn-secondary,
+.blind-showcase .btn-primary,
+.blind-showcase .btn-secondary,
+.blind-cta .btn-primary,
+.blind-cta .btn-secondary {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+/*==============================================================================
+    160. PRODUCT CONTENT SAFETY
+==============================================================================*/
+
+.blind-product-content,
+.blind-showcase-content,
+.blind-cta-content,
+.blind-collection-content {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+/*==============================================================================
+    161. FEATURE TEXT SAFETY
+==============================================================================*/
+
+.blind-features li {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+    .blind-features li span {
+        min-width: 0;
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+
+/*==============================================================================
+    162. DETAIL CONTENT SAFETY
+==============================================================================*/
+
+.blind-detail-item {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+    .blind-detail-item > div {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+
+    .blind-detail-item h4,
+    .blind-detail-item p {
+        overflow-wrap: break-word;
+    }
+
+
+/*==============================================================================
+    163. CARD SAFETY
+==============================================================================*/
+
+.blind-benefit-card,
+.blind-collection-card {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+/*==============================================================================
+    164. SAFE SECTION OVERFLOW
+==============================================================================*/
+
+.page-hero,
+.blinds-intro,
+.blind-product,
+.blind-showcase,
+.blind-gallery-section,
+.blind-benefits,
+.blind-collection,
+.blind-cta {
+    overflow-x: clip;
+}
+
+
+/*==============================================================================
+    165. OVERFLOW FALLBACK
+==============================================================================*/
+
+@supports not (overflow-x: clip) {
+
+    .page-hero,
+    .blinds-intro,
+    .blind-product,
+    .blind-showcase,
+    .blind-gallery-section,
+    .blind-benefits,
+    .blind-collection,
+    .blind-cta {
+        overflow-x: hidden;
+    }
+}
+
+
+/*==============================================================================
+    166. MOBILE WIDTH SAFETY
+==============================================================================*/
+
+@media (max-width: 768px) {
+
+    .page-hero,
+    .blinds-intro,
+    .blind-product,
+    .blind-showcase,
+    .blind-gallery-section,
+    .blind-benefits,
+    .blind-collection,
+    .blind-cta {
+        width: 100%;
+        max-width: 100vw;
+    }
+
+
+        .page-hero > .container,
+        .blinds-intro > .container,
+        .blind-product > .container,
+        .blind-showcase > .container,
+        .blind-gallery-section > .container,
+        .blind-benefits > .container,
+        .blind-collection > .container,
+        .blind-cta > .container {
+            width: 100%;
+            max-width: 100%;
+        }
+
+
+    /*
+        Important:
+
+        This does NOT change the existing
+        image width or grid layout.
+    */
+
+    .blind-product-grid,
+    .blind-showcase-grid,
+    .blind-showcase-images,
+    .blind-gallery-grid,
+    .blind-mini-gallery,
+    .blind-benefits-grid,
+    .blind-collection-grid {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+}
+
+
+/*==============================================================================
+    167. SMALL PHONE SAFETY
+==============================================================================*/
+
+@media (max-width: 480px) {
+
+    .page-hero,
+    .blinds-intro,
+    .blind-product,
+    .blind-showcase,
+    .blind-gallery-section,
+    .blind-benefits,
+    .blind-collection,
+    .blind-cta {
+        max-width: 100vw;
+        overflow-x: clip;
+    }
+
+
+    .blind-product-grid,
+    .blind-showcase-grid,
+    .blind-showcase-images,
+    .blind-gallery-grid,
+    .blind-mini-gallery,
+    .blind-benefits-grid,
+    .blind-collection-grid {
+        max-width: 100%;
+    }
+}
+
+
+/*==============================================================================
+    168. EXTRA SMALL PHONE SAFETY
+==============================================================================*/
+
+@media (max-width: 360px) {
+
+    .page-hero,
+    .blinds-intro,
+    .blind-product,
+    .blind-showcase,
+    .blind-gallery-section,
+    .blind-benefits,
+    .blind-collection,
+    .blind-cta {
+        max-width: 100vw;
+    }
+
+
+    .blind-product-content,
+    .blind-showcase-content,
+    .blind-collection-content,
+    .blind-cta-content {
+        max-width: 100%;
+    }
+}
+
+
+/*==============================================================================
+    169. TOUCH DEVICE SAFETY
+==============================================================================*/
+
+@media (hover: none) {
+
+    /*
+        Product image hover
+    */
+
+    .blind-product-image:hover img {
+        transform: none;
+    }
+
+
+    /*
+        Showcase hover
+    */
+
+    .blind-showcase-images figure:hover img {
+        transform: none;
+    }
+
+
+    /*
+        Gallery hover
+    */
+
+    .blind-gallery-item:hover img {
+        transform: none;
+        filter: none;
+    }
+
+
+    .blind-gallery-card:hover img {
+        transform: none;
+    }
+
+
+    /*
+        Benefit cards
+    */
+
+    .blind-benefit-card:hover {
+        transform: none;
+    }
+
+
+        .blind-benefit-card:hover::before {
+            transform: scaleX(0);
+        }
+
+
+    /*
+        Collection cards
+    */
+
+    .blind-collection-card:hover {
+        transform: none;
+    }
+
+
+        .blind-collection-card:hover
+        .blind-collection-image img {
+            transform: none;
+        }
+
+
+    /*
+        Collection link
+    */
+
+    .blind-collection-content a:hover i {
+        transform: none;
+    }
+}
+
+
+/*==============================================================================
+    170. REDUCED MOTION
+==============================================================================*/
+
+@media (prefers-reduced-motion: reduce) {
+
+    .page-hero-image img,
+    .blind-product-image img,
+    .blind-showcase-images img,
+    .blind-gallery-item img,
+    .blind-gallery-card img,
+    .blind-collection-image img,
+    .blind-benefit-card,
+    .blind-benefit-card::before,
+    .blind-benefit-icon,
+    .blind-collection-card,
+    .blind-collection-content a,
+    .blind-collection-content a i {
+        transition: none !important;
+        animation: none !important;
+    }
+
+
+        .page-hero:hover
+        .page-hero-image img,
+        .blind-product-image:hover img,
+        .blind-showcase-images figure:hover img,
+        .blind-gallery-item:hover img,
+        .blind-gallery-card:hover img,
+        .blind-collection-card:hover
+        .blind-collection-image img {
+            transform: none !important;
+        }
+
+
+        .blind-benefit-card:hover,
+        .blind-collection-card:hover {
+            transform: none !important;
+        }
+
+
+            .blind-benefit-card:hover::before {
+                transform: scaleX(0) !important;
+            }
+
+
+            .blind-benefit-card:hover
+            .blind-benefit-icon {
+                transform: none !important;
+            }
+
+
+        .blind-collection-content a:hover i {
+            transform: none !important;
+        }
+}
+
+
+/*==============================================================================
+    171. FOCUS SAFETY
+==============================================================================*/
+
+.page-hero a:focus-visible,
+.blinds-intro a:focus-visible,
+.blind-product a:focus-visible,
+.blind-showcase a:focus-visible,
+.blind-gallery-section a:focus-visible,
+.blind-benefits a:focus-visible,
+.blind-collection a:focus-visible,
+.blind-cta a:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+
+/*==============================================================================
+    172. FIGURE RESET
+==============================================================================*/
+
+.blind-showcase-images figure,
+.blind-gallery-item,
+.blind-gallery-card {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+/*==============================================================================
+    173. VIDEO / EMBED SAFETY
+==============================================================================*/
+
+.blind-product video,
+.blind-showcase video,
+.blind-gallery-section video,
+.blind-collection video {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*==============================================================================
+    174. TABLE / PRE SAFETY
+==============================================================================*/
+
+.blind-product table,
+.blind-showcase table,
+.blind-gallery-section table,
+.blind-benefits table,
+.blind-collection table,
+.blind-cta table {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+
+.blind-product pre,
+.blind-showcase pre,
+.blind-gallery-section pre,
+.blind-benefits pre,
+.blind-collection pre,
+.blind-cta pre {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+
+/*==============================================================================
+    175. PRINT SAFETY
+==============================================================================*/
+
+@media print {
+
+    .page-hero,
+    .blinds-intro,
+    .blind-product,
+    .blind-showcase,
+    .blind-gallery-section,
+    .blind-benefits,
+    .blind-collection,
+    .blind-cta {
+        overflow: visible;
+        box-shadow: none;
+    }
+
+
+    .blind-product-image,
+    .blind-showcase-images figure,
+    .blind-gallery-item,
+    .blind-gallery-card,
+    .blind-benefit-card,
+    .blind-collection-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+
+        .page-hero-image img,
+        .blind-product-image img,
+        .blind-showcase-images img,
+        .blind-gallery-item img,
+        .blind-gallery-card img,
+        .blind-collection-image img {
+            transform: none !important;
+            filter: none !important;
+        }
+
+
+    .blind-cta {
+        background: var(--white);
+        color: #000;
+    }
+
+
+    .blind-cta-content h2,
+    .blind-cta-content p {
+        color: #000;
+    }
+}
+
+
+/*==============================================================================
+    176. FINAL RULE GUARD
+==============================================================================*/
+
+/*
+    DO NOT PUT THESE RULES IN PART 05:
+
+        .blind-product-image {
+            width: ...;
+        }
+
+        .blind-product-image img {
+            height: ...;
+        }
+
+        .blind-product-grid {
+            grid-template-columns: ...;
+        }
+
+        .blind-showcase-grid {
+            grid-template-columns: ...;
+        }
+
+        .blind-gallery-grid {
+            grid-template-columns: ...;
+        }
+
+        .blind-benefits-grid {
+            grid-template-columns: ...;
+        }
+
+        .blind-collection-grid {
+            grid-template-columns: ...;
+        }
+
+    Those belong to PART 01–04.
+
+    PART 05 = SAFETY ONLY.
+*/
+
+
+/*==============================================================================
+    177. FINAL END
+==============================================================================*/
+
+/*
+    BLINDS.CSS — PART 05 COMPLETE
+
+    ✓ Hero untouched
+    ✓ Product layout untouched
+    ✓ Product image size untouched
+    ✓ Showcase untouched
+    ✓ Gallery untouched
+    ✓ Benefits untouched
+    ✓ Collection untouched
+    ✓ CTA untouched
+
+    ✓ Overflow protected
+    ✓ Images protected
+    ✓ Text protected
+    ✓ Buttons protected
+    ✓ Mobile width protected
+    ✓ Touch devices protected
+    ✓ Reduced motion supported
+    ✓ Keyboard focus supported
+    ✓ Print supported
+
+    END OF BLINDS.CSS PART 05
+==============================================================================*/
+/*==============================================================================
+    GIS CURTAIN DÉCOR
+    BLINDS.CSS — PART 06
+
+    FINAL PAGE POLISH + INTEGRATION
+
+    --------------------------------------------------------------------------
+    PART 01 → HERO + INTRO
+    PART 02 → PRODUCTS + PRODUCT IMAGES
+    PART 03 → SHOWCASE + GALLERY
+    PART 04 → BENEFITS + COLLECTION + CTA
+    PART 05 → SAFETY
+    PART 06 → FINAL PAGE POLISH
+
+    IMPORTANT
+    --------------------------------------------------------------------------
+    This part does NOT rebuild the page layout.
+
+    It only provides:
+    • final spacing protection
+    • anchor scroll offset
+    • reveal compatibility
+    • footer integration
+    • back-to-top integration
+    • final mobile polish
+    • accessibility
+==============================================================================*/
+
+
+/*==============================================================================
+    178. ANCHOR SCROLL OFFSET
+==============================================================================*/
+
+/*
+    Prevents section headings from hiding underneath
+    the sticky header when using:
+
+        #roller-blinds
+        #zebra-blinds
+        #roman-blinds
+        #vertical-blinds
+        #venetian-blinds
+*/
+
+#roller-blinds,
+#zebra-blinds,
+#roman-blinds,
+#vertical-blinds,
+#venetian-blinds {
+    scroll-margin-top: 100px;
+}
+
+
+/*==============================================================================
+    179. MOBILE ANCHOR OFFSET
+==============================================================================*/
+
+@media (max-width: 768px) {
+
+    #roller-blinds,
+    #zebra-blinds,
+    #roman-blinds,
+    #vertical-blinds,
+    #venetian-blinds {
+        scroll-margin-top: 82px;
+    }
+}
+
+
+/*==============================================================================
+    180. PAGE MAIN SAFETY
+==============================================================================*/
+
+main {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+
+/*==============================================================================
+    181. MAIN FALLBACK
+==============================================================================*/
+
+@supports not (overflow-x: clip) {
+
+    main {
+        overflow-x: hidden;
+    }
+}
+
+
+/*==============================================================================
+    182. REVEAL ANIMATION COMPATIBILITY
+==============================================================================*/
+
+/*
+    common.css already controls the global reveal system.
+
+    This section only makes sure blind-specific
+    elements behave correctly when JS adds .show.
+*/
+
+.blind-product.reveal,
+.blind-showcase.reveal,
+.blind-gallery-section.reveal,
+.blind-benefits.reveal,
+.blind-collection.reveal,
+.blind-cta.reveal {
+    will-change: opacity, transform;
+}
+
+
+/*==============================================================================
+    183. REVEAL REDUCED MOTION
+==============================================================================*/
+
+@media (prefers-reduced-motion: reduce) {
+
+    .blind-product.reveal,
+    .blind-showcase.reveal,
+    .blind-gallery-section.reveal,
+    .blind-benefits.reveal,
+    .blind-collection.reveal,
+    .blind-cta.reveal {
+        will-change: auto;
+    }
+}
+
+
+/*==============================================================================
+    184. FOOTER INTEGRATION
+==============================================================================*/
+
+/*
+    Footer styling itself belongs to common.css.
+
+    These rules only prevent the Blinds page from
+    creating horizontal overflow around the footer.
+*/
+
+.footer {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+    box-sizing: border-box;
+}
+
+
+/*==============================================================================
+    185. FOOTER FALLBACK
+==============================================================================*/
+
+@supports not (overflow-x: clip) {
+
+    .footer {
+        overflow-x: hidden;
+    }
+}
+
+
+/*==============================================================================
+    186. FOOTER CONTENT SAFETY
+==============================================================================*/
+
+.footer .container,
+.footer-grid,
+.footer-about,
+.footer-links,
+.footer-contact,
+.footer-bottom {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+/*==============================================================================
+    187. FOOTER TEXT SAFETY
+==============================================================================*/
+
+.footer h3,
+.footer p,
+.footer a,
+.footer span {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+
+/*==============================================================================
+    188. FOOTER CONTACT SAFETY
+==============================================================================*/
+
+.footer-contact li {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+    .footer-contact li span,
+    .footer-contact li a {
+        min-width: 0;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+
+/*==============================================================================
+    189. FOOTER LINKS SAFETY
+==============================================================================*/
+
+.footer-links li {
+    min-width: 0;
+    max-width: 100%;
+}
+
+
+.footer-links a {
+    overflow-wrap: anywhere;
+}
+
+
+/*==============================================================================
+    190. FOOTER IMAGE SAFETY
+==============================================================================*/
+
+.footer img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*==============================================================================
+    191. BACK TO TOP INTEGRATION
+==============================================================================*/
+
+/*
+    common.css owns:
+        position
+        opacity
+        visibility
+        show state
+        colors
+        shadow
+
+    We only make sure it never creates
+    horizontal overflow on small screens.
+*/
+
+.back-to-top {
+    max-width: calc(100vw - 24px);
+    box-sizing: border-box;
+}
+
+
+/*==============================================================================
+    192. MOBILE BACK TO TOP
+==============================================================================*/
+
+@media (max-width: 768px) {
+
+    .back-to-top {
+        right: 15px;
+        bottom: 15px;
+        width: 48px;
+        height: 48px;
+        font-size: 1rem;
+    }
+}
+
+
+/*==============================================================================
+    193. SMALL MOBILE BACK TO TOP
+==============================================================================*/
+
+@media (max-width: 480px) {
+
+    .back-to-top {
+        right: 12px;
+        bottom: 12px;
+        width: 46px;
+        height: 46px;
+        font-size: .95rem;
+    }
+}
+
+
+/*==============================================================================
+    194. BACK TO TOP TOUCH SAFETY
+==============================================================================*/
+
+@media (hover: none) {
+
+    .back-to-top:hover {
+        background: var(--primary);
+        transform: translateY(0);
+    }
+}
+
+
+/*==============================================================================
+    195. BACK TO TOP REDUCED MOTION
+==============================================================================*/
+
+@media (prefers-reduced-motion: reduce) {
+
+    .back-to-top {
+        transition: none !important;
+    }
+
+
+        .back-to-top:hover {
+            transform: none !important;
+        }
+}
+
+
+/*==============================================================================
+    196. FINAL SECTION SPACING GUARD
+==============================================================================*/
+
+/*
+    Keep the 20px section spacing system.
+
+    No giant vertical gaps.
+*/
+
+.blinds-intro,
+.blind-product,
+.blind-showcase,
+.blind-gallery-section,
+.blind-benefits,
+.blind-collection,
+.blind-cta {
+    box-sizing: border-box;
+}
+
+
+    /*==============================================================================
+    197. FIRST PRODUCT SAFETY
+==============================================================================*/
+
+    .blinds-intro + .blind-product {
+        border-top: 0;
+    }
+
+
+/*==============================================================================
+    198. LAST CTA SAFETY
+==============================================================================*/
+
+.blind-cta {
+    margin-bottom: 0;
+}
+
+
+    /*==============================================================================
+    199. CTA + FOOTER GAP
+==============================================================================*/
+
+    /*
+    The CTA should finish naturally before
+    the global footer begins.
+
+    No artificial 50px / 80px gap.
+*/
+
+    .blind-cta + .footer {
+        margin-top: 0;
+    }
+
+
+/*==============================================================================
+    200. BODY WIDTH SAFETY
+==============================================================================*/
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/*==============================================================================
+    201. MOBILE BODY SAFETY
+==============================================================================*/
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+}
+
+
+/*==============================================================================
+    202. SELECTED TEXT
+==============================================================================*/
+
+::selection {
+    background: var(--primary);
+    color: var(--white);
+}
+
+
+/*==============================================================================
+    203. ACCESSIBILITY — FOCUS
+==============================================================================*/
+
+.blind-product a:focus-visible,
+.blind-showcase a:focus-visible,
+.blind-gallery-section a:focus-visible,
+.blind-benefits a:focus-visible,
+.blind-collection a:focus-visible,
+.blind-cta a:focus-visible,
+.footer a:focus-visible,
+.back-to-top:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+}
+
+
+/*==============================================================================
+    204. KEYBOARD BUTTON SAFETY
+==============================================================================*/
+
+.blind-product button:focus-visible,
+.blind-showcase button:focus-visible,
+.blind-gallery-section button:focus-visible,
+.blind-benefits button:focus-visible,
+.blind-collection button:focus-visible,
+.blind-cta button:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+}
+
+
+/*==============================================================================
+    205. VERY SMALL SCREEN TEXT PROTECTION
+==============================================================================*/
+
+@media (max-width: 360px) {
+
+    .footer h3 {
+        overflow-wrap: break-word;
+    }
+
+
+    .footer-contact li {
+        gap: 10px;
+    }
+
+
+    .footer-contact i {
+        flex: 0 0 auto;
+    }
+
+
+    .footer-contact a,
+    .footer-contact span {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+}
+
+
+/*==============================================================================
+    206. PRINT — FINAL PAGE
+==============================================================================*/
+
+@media print {
+
+    html,
+    body {
+        overflow: visible;
+    }
+
+
+    main {
+        overflow: visible;
+    }
+
+
+    .back-to-top {
+        display: none !important;
+    }
+
+
+    .footer {
+        overflow: visible;
+    }
+
+
+    .blind-cta + .footer {
+        margin-top: 0;
+    }
+}
+
+
+/*==============================================================================
+    207. FINAL CSS INTEGRITY GUARD
+==============================================================================*/
+
+/*
+    PART 06 intentionally DOES NOT define:
+
+        .blind-product-image width
+        .blind-product-image height
+
+        .blind-product-grid columns
+
+        .blind-showcase-grid columns
+
+        .blind-gallery-grid columns
+
+        .blind-benefits-grid columns
+
+        .blind-collection-grid columns
+
+        hero dimensions
+
+    Those are already handled by PART 01–04.
+
+    This prevents CSS cascade conflicts.
+*/
+
+
+/*==============================================================================
+    208. FINAL PAGE CHECK
+==============================================================================*/
+
+/*
+    BLINDS.CSS FINAL STRUCTURE
+
+    PART 01
+        ✓ Hero
+        ✓ Hero alignment
+        ✓ Breadcrumb
+        ✓ Intro
+
+    PART 02
+        ✓ Product layout
+        ✓ Product image sizing
+        ✓ 4:3 images
+        ✓ Responsive product sections
+
+    PART 03
+        ✓ Showcase
+        ✓ Gallery
+        ✓ Responsive gallery
+
+    PART 04
+        ✓ Benefits
+        ✓ Collection
+        ✓ CTA
+
+    PART 05
+        ✓ Safety
+        ✓ Overflow protection
+        ✓ Image safety
+        ✓ Accessibility
+
+    PART 06
+        ✓ Anchor scrolling
+        ✓ Footer integration
+        ✓ Back-to-top integration
+        ✓ Reveal compatibility
+        ✓ Final mobile polish
+        ✓ Final page safety
+
+    ================================================================
+
+    FINAL STATUS:
+
+        HERO             ✓
+        PRODUCT IMAGES   ✓
+        PRODUCT SPACING  ✓
+        SHOWCASE         ✓
+        GALLERY          ✓
+        BENEFITS         ✓
+        COLLECTION       ✓
+        CTA              ✓
+        FOOTER           ✓
+        MOBILE           ✓
+        TABLET           ✓
+        DESKTOP          ✓
+        OVERFLOW         ✓
+        ACCESSIBILITY    ✓
+
+==============================================================================*/
+
+/*==============================================================================
+    END — BLINDS.CSS PART 06
+==============================================================================*/

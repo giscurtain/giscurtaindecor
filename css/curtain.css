@@ -1,0 +1,1851 @@
+﻿/*==============================================================================
+    GIS CURTAIN DÉCOR
+    CURTAIN.CSS
+    COMPLETE CLEAN VERSION
+
+    SECTION SPACING:
+    20px TOP
+    20px BOTTOM
+
+    Works with:
+    common.css
+    curtian.html
+==============================================================================*/
+
+
+/*==============================================================================
+    01. PAGE HERO
+==============================================================================*/
+
+.page-hero {
+    position: relative;
+    width: 100%;
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+
+.page-hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+
+    .page-hero-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+
+.page-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient( 90deg, rgba(0,0,0,.80) 0%, rgba(0,0,0,.58) 48%, rgba(0,0,0,.28) 100% );
+}
+
+
+.page-hero > .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+.page-hero-content {
+    width: min(100%, 850px);
+    padding-top: var(--header-height);
+}
+
+
+    .page-hero-content .section-tag {
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+
+    .page-hero-content h1 {
+        margin: 18px 0 20px;
+        color: var(--white);
+        font-family: var(--font-heading);
+        font-size: clamp( 3rem, 6vw, 4.8rem );
+        font-weight: 600;
+        line-height: 1.08;
+        text-wrap: balance;
+    }
+
+
+    .page-hero-content p {
+        width: min(100%, 720px);
+        margin-bottom: 22px;
+        color: rgba(255,255,255,.90);
+        font-size: 17px;
+        line-height: 1.85;
+    }
+
+
+/*==============================================================================
+    02. BREADCRUMB
+==============================================================================*/
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 15px;
+    color: rgba(255,255,255,.78);
+    font-size: 14px;
+}
+
+
+    .breadcrumb a {
+        color: var(--white);
+        transition: var(--transition);
+    }
+
+
+        .breadcrumb a:hover {
+            color: var(--primary);
+        }
+
+
+    .breadcrumb span {
+        color: rgba(255,255,255,.70);
+    }
+
+
+/*==============================================================================
+    03. GLOBAL CURTAIN SECTION SPACING
+==============================================================================*/
+
+/*
+    IMPORTANT
+
+    All major curtain sections use exactly:
+
+        padding: 20px 0;
+
+    This keeps desktop and mobile spacing compact.
+*/
+
+
+.curtain-intro,
+.curtain-product,
+.curtain-showcase,
+.curtain-gallery-section,
+.curtain-benefits,
+.curtain-collection,
+.curtain-cta {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/*==============================================================================
+    04. INTRO
+==============================================================================*/
+
+.curtain-intro {
+    background: var(--white);
+}
+
+
+    .curtain-intro .section-title {
+        width: min(100%, 850px);
+        margin-inline: auto;
+        text-align: center;
+    }
+
+
+        .curtain-intro .section-title h2 {
+            margin-bottom: 15px;
+            text-wrap: balance;
+        }
+
+
+        .curtain-intro .section-title p {
+            width: min(100%, 760px);
+            margin-inline: auto;
+            line-height: 1.85;
+        }
+
+
+            .curtain-intro .section-title p + p {
+                margin-top: 12px;
+            }
+
+
+/*==============================================================================
+    05. CURTAIN PRODUCT
+==============================================================================*/
+
+.curtain-product {
+    background: var(--white);
+}
+
+
+.curtain-product-alt {
+    background: var(--light);
+}
+
+
+.curtain-product-grid {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+    align-items: center;
+    gap: 40px;
+}
+
+
+/*==============================================================================
+    06. ALTERNATE PRODUCT
+==============================================================================*/
+
+.curtain-product-alt
+.curtain-product-grid {
+    direction: rtl;
+}
+
+
+    .curtain-product-alt
+    .curtain-product-grid > * {
+        direction: ltr;
+    }
+
+
+/*==============================================================================
+    07. PRODUCT IMAGE
+==============================================================================*/
+
+.curtain-product-image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    background: var(--light);
+    box-shadow: var(--shadow-md);
+}
+
+
+    .curtain-product-image img {
+        display: block;
+        width: 100%;
+        height: 480px;
+        object-fit: cover;
+        object-position: center;
+        transition: transform .6s ease;
+    }
+
+
+    .curtain-product-image::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient( to bottom, transparent 60%, rgba(0,0,0,.10) );
+    }
+
+
+@media (hover:hover) {
+
+    .curtain-product-image:hover img {
+        transform: scale(1.04);
+    }
+}
+
+
+/*==============================================================================
+    08. PRODUCT CONTENT
+==============================================================================*/
+
+.curtain-product-content {
+    width: 100%;
+    max-width: 620px;
+}
+
+
+    .curtain-product-content .section-tag {
+        display: inline-block;
+        margin-bottom: 4px;
+    }
+
+
+    .curtain-product-content h2 {
+        margin: 12px 0 15px;
+        font-family: var(--font-heading);
+        font-size: clamp( 2.4rem, 4vw, 3.5rem );
+        line-height: 1.12;
+        text-wrap: balance;
+    }
+
+
+    .curtain-product-content p {
+        margin-bottom: 14px;
+        color: var(--text);
+        line-height: 1.85;
+    }
+
+
+/*==============================================================================
+    09. PRODUCT FEATURES
+==============================================================================*/
+
+.curtain-features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+    .curtain-features li {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+
+        .curtain-features li i {
+            flex: 0 0 auto;
+            margin-top: 5px;
+            color: var(--primary);
+            font-size: 14px;
+        }
+
+
+        .curtain-features li span {
+            color: var(--secondary);
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.65;
+        }
+
+
+@media (hover:hover) {
+
+    .curtain-features li {
+        transition: transform .25s ease;
+    }
+
+
+        .curtain-features li:hover {
+            transform: translateX(4px);
+        }
+}
+
+
+/*==============================================================================
+    10. PRODUCT ACTIONS
+==============================================================================*/
+
+.curtain-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+
+    .curtain-actions .btn-primary,
+    .curtain-actions .btn-secondary {
+        min-width: 180px;
+    }
+
+
+/*==============================================================================
+    11. PRODUCT SEPARATOR
+==============================================================================*/
+
+.curtain-product + .curtain-product {
+    border-top: 1px solid rgba(200,169,106,.08);
+}
+
+
+/*==============================================================================
+    12. CURTAIN SHOWCASE
+==============================================================================*/
+
+.curtain-showcase {
+    background: var(--white);
+}
+
+
+    .curtain-showcase:nth-of-type(even) {
+        background: var(--light);
+    }
+
+
+.curtain-showcase-grid {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+    align-items: center;
+    gap: 35px;
+}
+
+
+.curtain-showcase-content {
+    width: 100%;
+    max-width: 620px;
+}
+
+
+    .curtain-showcase-content h2 {
+        margin: 12px 0 15px;
+        font-family: var(--font-heading);
+        font-size: clamp( 2.3rem, 4vw, 3.4rem );
+        line-height: 1.12;
+        text-wrap: balance;
+    }
+
+
+    .curtain-showcase-content p {
+        margin-bottom: 14px;
+        line-height: 1.85;
+    }
+
+
+/*==============================================================================
+    13. SHOWCASE IMAGES
+==============================================================================*/
+
+.curtain-showcase-images {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 12px;
+    width: 100%;
+}
+
+
+    .curtain-showcase-images figure {
+        margin: 0;
+        overflow: hidden;
+        border-radius: var(--radius);
+        background: var(--light);
+        box-shadow: var(--shadow-sm);
+    }
+
+
+    .curtain-showcase-images img {
+        display: block;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+        transition: transform .6s ease;
+    }
+
+
+@media (hover:hover) {
+
+    .curtain-showcase-images figure:hover img {
+        transform: scale(1.05);
+    }
+}
+
+
+/*==============================================================================
+    14. GALLERY SECTION
+==============================================================================*/
+
+.curtain-gallery-section {
+    background: var(--light);
+}
+
+
+    .curtain-gallery-section .section-title {
+        width: min(100%, 800px);
+        margin: 0 auto 20px;
+        text-align: center;
+    }
+
+
+/*==============================================================================
+    15. MAIN GALLERY
+==============================================================================*/
+
+.curtain-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat( 3, minmax(0,1fr) );
+    gap: 16px;
+    width: 100%;
+}
+
+
+.curtain-gallery-item {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    min-width: 0;
+    border-radius: var(--radius);
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    aspect-ratio: 4 / 3;
+}
+
+
+    .curtain-gallery-item img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: transform .6s ease;
+    }
+
+
+    .curtain-gallery-item::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient( to top, rgba(0,0,0,.50), transparent 55% );
+    }
+
+
+    .curtain-gallery-item figcaption {
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        bottom: 15px;
+        z-index: 2;
+        color: var(--white);
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+
+@media (hover:hover) {
+
+    .curtain-gallery-item:hover img {
+        transform: scale(1.06);
+    }
+}
+
+
+/*==============================================================================
+    16. MINI GALLERY
+==============================================================================*/
+
+.curtain-mini-gallery {
+    display: grid;
+    grid-template-columns: repeat( 3, minmax(0,1fr) );
+    gap: 16px;
+    width: 100%;
+}
+
+
+.curtain-gallery-card {
+    margin: 0;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    aspect-ratio: 4 / 3;
+}
+
+
+    .curtain-gallery-card img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: transform .6s ease;
+    }
+
+
+@media (hover:hover) {
+
+    .curtain-gallery-card:hover img {
+        transform: scale(1.05);
+    }
+}
+
+
+/*==============================================================================
+    17. BENEFITS
+==============================================================================*/
+
+.curtain-benefits {
+    background: var(--white);
+}
+
+
+    .curtain-benefits .section-title {
+        width: min(100%, 800px);
+        margin: 0 auto 20px;
+        text-align: center;
+    }
+
+
+.curtain-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat( 4, minmax(0,1fr) );
+    gap: 16px;
+}
+
+
+/*==============================================================================
+    18. BENEFIT CARD
+==============================================================================*/
+
+.curtain-benefit-card {
+    position: relative;
+    min-width: 0;
+    padding: 25px 20px;
+    overflow: hidden;
+    background: var(--light);
+    border: 1px solid rgba(200,169,106,.12);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+
+@media (hover:hover) {
+
+    .curtain-benefit-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+    }
+}
+
+
+.curtain-benefit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: rgba(200,169,106,.12);
+    color: var(--primary);
+    font-size: 22px;
+    transition: background .3s ease, color .3s ease, transform .3s ease;
+}
+
+
+@media (hover:hover) {
+
+    .curtain-benefit-card:hover
+    .curtain-benefit-icon {
+        background: var(--primary);
+        color: var(--white);
+        transform: scale(1.05);
+    }
+}
+
+
+.curtain-benefit-card h3 {
+    margin-bottom: 8px;
+    font-family: var(--font-heading);
+    font-size: 23px;
+    line-height: 1.25;
+}
+
+
+.curtain-benefit-card p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+
+/*==============================================================================
+    19. BENEFIT DECORATION
+==============================================================================*/
+
+.curtain-benefit-card::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(200,169,106,.06);
+    pointer-events: none;
+}
+
+
+/*==============================================================================
+    20. COLLECTION
+==============================================================================*/
+
+.curtain-collection {
+    background: var(--light);
+}
+
+
+    .curtain-collection .section-title {
+        width: min(100%, 800px);
+        margin: 0 auto 20px;
+        text-align: center;
+    }
+
+
+.curtain-collection-grid {
+    display: grid;
+    grid-template-columns: repeat( 3, minmax(0,1fr) );
+    gap: 16px;
+}
+
+
+/*==============================================================================
+    21. COLLECTION CARD
+==============================================================================*/
+
+.curtain-collection-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid rgba(200,169,106,.10);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+
+@media (hover:hover) {
+
+    .curtain-collection-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+    }
+}
+
+
+.curtain-collection-image {
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: var(--light);
+}
+
+
+    .curtain-collection-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: transform .6s ease;
+    }
+
+
+@media (hover:hover) {
+
+    .curtain-collection-card:hover
+    .curtain-collection-image img {
+        transform: scale(1.05);
+    }
+}
+
+
+.curtain-collection-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 18px;
+}
+
+
+    .curtain-collection-content > span {
+        margin-bottom: 4px;
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+
+    .curtain-collection-content h3 {
+        margin-bottom: 8px;
+        font-family: var(--font-heading);
+        font-size: 23px;
+        line-height: 1.2;
+    }
+
+
+    .curtain-collection-content p {
+        margin-bottom: 14px;
+        color: var(--text);
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+
+    .curtain-collection-content a {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        margin-top: auto;
+        color: var(--primary);
+        font-size: 13px;
+        font-weight: 600;
+        transition: var(--transition);
+    }
+
+
+        .curtain-collection-content a:hover {
+            gap: 11px;
+        }
+
+
+/*==============================================================================
+    22. CTA
+==============================================================================*/
+
+.curtain-cta {
+    position: relative;
+    overflow: hidden;
+    background: var(--secondary);
+    color: var(--white);
+    isolation: isolate;
+}
+
+
+    .curtain-cta::before {
+        content: "";
+        position: absolute;
+        top: -180px;
+        left: -180px;
+        width: 420px;
+        height: 420px;
+        border-radius: 50%;
+        background: radial-gradient( circle, rgba(200,169,106,.16), transparent 70% );
+        pointer-events: none;
+    }
+
+
+    .curtain-cta::after {
+        content: "";
+        position: absolute;
+        right: -180px;
+        bottom: -220px;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: radial-gradient( circle, rgba(200,169,106,.10), transparent 70% );
+        pointer-events: none;
+    }
+
+
+.curtain-cta-content {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 800px);
+    margin-inline: auto;
+    text-align: center;
+}
+
+
+    .curtain-cta-content .section-tag {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
+
+    .curtain-cta-content h2 {
+        margin-bottom: 12px;
+        color: var(--white);
+        font-family: var(--font-heading);
+        font-size: clamp( 2.3rem, 5vw, 3.8rem );
+        line-height: 1.12;
+        text-wrap: balance;
+    }
+
+
+    .curtain-cta-content p {
+        width: min(100%, 680px);
+        margin: 0 auto 18px;
+        color: rgba(255,255,255,.80);
+        line-height: 1.8;
+    }
+
+
+.curtain-cta-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.curtain-cta .btn-secondary {
+    border-color: rgba(255,255,255,.70);
+    color: var(--white);
+}
+
+
+    .curtain-cta .btn-secondary:hover {
+        border-color: var(--primary);
+        background: var(--primary);
+        color: var(--white);
+    }
+
+
+/*
+    Current HTML places the CTA WhatsApp button directly
+    inside curtain-cta-content, without curtain-cta-buttons.
+*/
+
+.curtain-cta-content >
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 190px;
+    margin-top: 2px;
+}
+
+
+/*==============================================================================
+    23. TABLET
+==============================================================================*/
+
+@media (max-width: 1100px) {
+
+    .curtain-product-grid {
+        gap: 30px;
+    }
+
+
+    .curtain-product-image img {
+        height: 420px;
+    }
+
+
+    .curtain-showcase-grid {
+        gap: 25px;
+    }
+
+
+    .curtain-showcase-images img {
+        height: 250px;
+    }
+
+
+    .curtain-benefits-grid {
+        grid-template-columns: repeat( 2, minmax(0,1fr) );
+    }
+
+
+    .curtain-collection-grid {
+        grid-template-columns: repeat( 2, minmax(0,1fr) );
+    }
+}
+
+
+/*==============================================================================
+    24. TABLET
+==============================================================================*/
+
+@media (max-width: 992px) {
+
+    /* HERO */
+
+    .page-hero {
+        min-height: 600px;
+    }
+
+
+    .page-hero-content {
+        padding-top: 90px;
+    }
+
+
+    /* PRODUCT */
+
+    .curtain-product-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+
+    .curtain-product-alt
+    .curtain-product-grid {
+        direction: ltr;
+    }
+
+
+    .curtain-product-image {
+        max-width: 800px;
+        margin-inline: auto;
+    }
+
+
+    .curtain-product-content {
+        max-width: 800px;
+        margin-inline: auto;
+    }
+
+
+    /* SHOWCASE */
+
+    .curtain-showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+
+    .curtain-showcase-content {
+        max-width: 800px;
+        margin-inline: auto;
+    }
+
+
+    .curtain-showcase-images {
+        max-width: 800px;
+        margin-inline: auto;
+    }
+
+
+    /* GALLERY */
+
+    .curtain-gallery-grid {
+        grid-template-columns: repeat( 2, minmax(0,1fr) );
+    }
+
+
+    /* MINI GALLERY */
+
+    .curtain-mini-gallery {
+        grid-template-columns: repeat( 2, minmax(0,1fr) );
+    }
+}
+
+
+/*==============================================================================
+    25. MOBILE
+==============================================================================*/
+
+@media (max-width: 768px) {
+
+    /*----------------------------------------------------------------------
+        PAGE HERO
+    ----------------------------------------------------------------------*/
+
+    .page-hero {
+        min-height: 520px;
+    }
+
+
+        .page-hero > .container {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 16px;
+            padding-right: 16px;
+            box-sizing: border-box;
+        }
+
+
+    .page-hero-content {
+        width: 100%;
+        padding-top: 85px;
+    }
+
+
+        .page-hero-content h1 {
+            margin: 12px 0 15px;
+            font-size: clamp( 2.35rem, 10vw, 3rem );
+            line-height: 1.08;
+        }
+
+
+        .page-hero-content p {
+            width: 100%;
+            margin-bottom: 16px;
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+
+    .breadcrumb {
+        gap: 7px;
+        font-size: 12px;
+    }
+
+
+    /*----------------------------------------------------------------------
+        ALL MAIN SECTIONS = 20px
+    ----------------------------------------------------------------------*/
+
+    .curtain-intro,
+    .curtain-product,
+    .curtain-showcase,
+    .curtain-gallery-section,
+    .curtain-benefits,
+    .curtain-collection,
+    .curtain-cta {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+
+        /*----------------------------------------------------------------------
+        INTRO
+    ----------------------------------------------------------------------*/
+
+        .curtain-intro > .container,
+        .curtain-product > .container,
+        .curtain-showcase > .container,
+        .curtain-gallery-section > .container,
+        .curtain-benefits > .container,
+        .curtain-collection > .container,
+        .curtain-cta > .container {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 16px;
+            padding-right: 16px;
+            box-sizing: border-box;
+        }
+
+
+        .curtain-intro .section-title {
+            width: 100%;
+        }
+
+
+            .curtain-intro .section-title h2 {
+                margin-bottom: 12px;
+                font-size: 2rem;
+            }
+
+
+            .curtain-intro .section-title p {
+                width: 100%;
+                font-size: 14px;
+                line-height: 1.75;
+            }
+
+
+    /*----------------------------------------------------------------------
+        PRODUCT
+    ----------------------------------------------------------------------*/
+
+    .curtain-product-grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 18px;
+    }
+
+
+    .curtain-product-alt
+    .curtain-product-grid {
+        direction: ltr;
+    }
+
+
+    .curtain-product-image {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        border-radius: var(--radius);
+    }
+
+
+        .curtain-product-image img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+
+
+    .curtain-product-content {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+
+        .curtain-product-content h2 {
+            margin: 8px 0 12px;
+            font-size: 2rem;
+            line-height: 1.12;
+        }
+
+
+        .curtain-product-content p {
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+
+    /*----------------------------------------------------------------------
+        FEATURES
+    ----------------------------------------------------------------------*/
+
+    .curtain-features {
+        gap: 9px;
+        margin: 17px 0;
+    }
+
+
+        .curtain-features li {
+            gap: 9px;
+        }
+
+
+            .curtain-features li i {
+                margin-top: 4px;
+                font-size: 13px;
+            }
+
+
+            .curtain-features li span {
+                font-size: 13.5px;
+                line-height: 1.6;
+            }
+
+
+    /*----------------------------------------------------------------------
+        ACTIONS
+    ----------------------------------------------------------------------*/
+
+    .curtain-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 9px;
+        margin-top: 16px;
+    }
+
+
+        .curtain-actions .btn-primary,
+        .curtain-actions .btn-secondary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-width: 0;
+            min-height: 50px;
+            box-sizing: border-box;
+        }
+
+
+    /*----------------------------------------------------------------------
+        SHOWCASE
+    ----------------------------------------------------------------------*/
+
+    .curtain-showcase-grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 18px;
+    }
+
+
+    .curtain-showcase-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+        .curtain-showcase-content h2 {
+            margin: 8px 0 12px;
+            font-size: 2rem;
+        }
+
+
+        .curtain-showcase-content p {
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+
+    .curtain-showcase-images {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+
+        .curtain-showcase-images figure {
+            width: 100%;
+            margin: 0;
+        }
+
+
+        .curtain-showcase-images img {
+            width: 100%;
+            height: 250px;
+        }
+
+
+    /*----------------------------------------------------------------------
+        GALLERY
+    ----------------------------------------------------------------------*/
+
+    .curtain-gallery-section .section-title {
+        width: 100%;
+        margin-bottom: 18px;
+    }
+
+
+    .curtain-gallery-grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+
+    .curtain-gallery-item {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+    }
+
+
+        .curtain-gallery-item figcaption {
+            left: 15px;
+            right: 15px;
+            bottom: 13px;
+            font-size: 16px;
+        }
+
+
+    /*----------------------------------------------------------------------
+        MINI GALLERY
+    ----------------------------------------------------------------------*/
+
+    .curtain-mini-gallery {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+
+    .curtain-gallery-card {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+    }
+
+
+    /*----------------------------------------------------------------------
+        BENEFITS
+    ----------------------------------------------------------------------*/
+
+    .curtain-benefits .section-title {
+        width: 100%;
+        margin-bottom: 18px;
+    }
+
+
+    .curtain-benefits-grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+
+    .curtain-benefit-card {
+        width: 100%;
+        min-height: 0;
+        padding: 22px 18px;
+        box-sizing: border-box;
+    }
+
+
+    .curtain-benefit-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 12px;
+        font-size: 21px;
+    }
+
+
+    .curtain-benefit-card h3 {
+        margin-bottom: 7px;
+        font-size: 22px;
+    }
+
+
+    .curtain-benefit-card p {
+        font-size: 13.5px;
+        line-height: 1.7;
+    }
+
+
+    /*----------------------------------------------------------------------
+        COLLECTION
+    ----------------------------------------------------------------------*/
+
+    .curtain-collection .section-title {
+        width: 100%;
+        margin-bottom: 18px;
+    }
+
+
+    .curtain-collection-grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+
+    .curtain-collection-card {
+        width: 100%;
+    }
+
+
+    .curtain-collection-image {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+    }
+
+
+    .curtain-collection-content {
+        padding: 17px;
+    }
+
+
+        .curtain-collection-content h3 {
+            font-size: 22px;
+        }
+
+
+        .curtain-collection-content p {
+            font-size: 13px;
+            line-height: 1.65;
+        }
+
+
+    /*----------------------------------------------------------------------
+        CTA
+    ----------------------------------------------------------------------*/
+
+    .curtain-cta-content {
+        width: 100%;
+    }
+
+
+        .curtain-cta-content h2 {
+            margin-bottom: 10px;
+            font-size: 2rem;
+            line-height: 1.12;
+        }
+
+
+        .curtain-cta-content p {
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+
+        .curtain-cta-content >
+        .btn-secondary {
+            display: flex;
+            width: 100%;
+            min-width: 0;
+            min-height: 50px;
+            box-sizing: border-box;
+        }
+}
+
+
+/*==============================================================================
+    26. SMALL MOBILE
+==============================================================================*/
+
+@media (max-width: 480px) {
+
+    .page-hero {
+        min-height: 470px;
+    }
+
+
+        .page-hero > .container {
+            padding-left: 14px;
+            padding-right: 14px;
+        }
+
+
+    .page-hero-content {
+        padding-top: 75px;
+    }
+
+
+        .page-hero-content h1 {
+            font-size: 2.15rem;
+        }
+
+
+        .page-hero-content p {
+            font-size: 13px;
+        }
+
+
+    .curtain-intro > .container,
+    .curtain-product > .container,
+    .curtain-showcase > .container,
+    .curtain-gallery-section > .container,
+    .curtain-benefits > .container,
+    .curtain-collection > .container,
+    .curtain-cta > .container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+
+    .curtain-intro .section-title h2 {
+        font-size: 1.85rem;
+    }
+
+
+    .curtain-product-grid {
+        gap: 15px;
+    }
+
+
+    .curtain-product-image img {
+        height: 220px;
+    }
+
+
+    .curtain-product-content h2 {
+        font-size: 1.85rem;
+    }
+
+
+    .curtain-product-content p {
+        font-size: 13.5px;
+    }
+
+
+    .curtain-features {
+        margin: 15px 0;
+        gap: 8px;
+    }
+
+
+        .curtain-features li span {
+            font-size: 13px;
+        }
+
+
+    .curtain-actions {
+        gap: 8px;
+    }
+
+
+    .curtain-showcase-grid {
+        gap: 15px;
+    }
+
+
+    .curtain-showcase-content h2 {
+        font-size: 1.85rem;
+    }
+
+
+    .curtain-showcase-images {
+        gap: 10px;
+    }
+
+
+        .curtain-showcase-images img {
+            height: 220px;
+        }
+
+
+    .curtain-gallery-grid {
+        gap: 10px;
+    }
+
+
+    .curtain-gallery-item figcaption {
+        font-size: 15px;
+    }
+
+
+    .curtain-mini-gallery {
+        gap: 10px;
+    }
+
+
+    .curtain-benefits-grid {
+        gap: 10px;
+    }
+
+
+    .curtain-benefit-card {
+        padding: 20px 16px;
+    }
+
+
+        .curtain-benefit-card h3 {
+            font-size: 21px;
+        }
+
+
+    .curtain-collection-grid {
+        gap: 10px;
+    }
+
+
+    .curtain-collection-content {
+        padding: 15px;
+    }
+
+
+        .curtain-collection-content h3 {
+            font-size: 21px;
+        }
+
+
+    .curtain-cta-content h2 {
+        font-size: 1.85rem;
+    }
+}
+
+
+/*==============================================================================
+    27. EXTRA SMALL PHONE
+==============================================================================*/
+
+@media (max-width: 360px) {
+
+    .page-hero {
+        min-height: 450px;
+    }
+
+
+    .page-hero-content h1 {
+        font-size: 1.95rem;
+    }
+
+
+    .curtain-intro .section-title h2 {
+        font-size: 1.7rem;
+    }
+
+
+    .curtain-product-image img {
+        height: 200px;
+    }
+
+
+    .curtain-product-content h2 {
+        font-size: 1.7rem;
+    }
+
+
+    .curtain-showcase-images img {
+        height: 200px;
+    }
+
+
+    .curtain-benefit-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 19px;
+    }
+
+
+    .curtain-benefit-card h3 {
+        font-size: 20px;
+    }
+
+
+    .curtain-collection-content h3 {
+        font-size: 20px;
+    }
+
+
+    .curtain-cta-content h2 {
+        font-size: 1.7rem;
+    }
+}
+
+
+/*==============================================================================
+    28. TOUCH DEVICES
+==============================================================================*/
+
+@media (hover:none) {
+
+    .curtain-product-image:hover img {
+        transform: none;
+    }
+
+
+    .curtain-features li:hover {
+        transform: none;
+    }
+
+
+    .curtain-showcase-images figure:hover img {
+        transform: none;
+    }
+
+
+    .curtain-gallery-item:hover img {
+        transform: none;
+    }
+
+
+    .curtain-gallery-card:hover img {
+        transform: none;
+    }
+
+
+    .curtain-benefit-card:hover {
+        transform: none;
+        box-shadow: var(--shadow-sm);
+    }
+
+
+        .curtain-benefit-card:hover
+        .curtain-benefit-icon {
+            background: rgba(200,169,106,.12);
+            color: var(--primary);
+            transform: none;
+        }
+
+
+    .curtain-collection-card:hover {
+        transform: none;
+        box-shadow: var(--shadow-sm);
+    }
+
+
+        .curtain-collection-card:hover
+        .curtain-collection-image img {
+            transform: none;
+        }
+}
+
+
+/*==============================================================================
+    29. REDUCED MOTION
+==============================================================================*/
+
+@media (prefers-reduced-motion: reduce) {
+
+    .curtain-product-image img,
+    .curtain-features li,
+    .curtain-showcase-images img,
+    .curtain-gallery-item img,
+    .curtain-gallery-card img,
+    .curtain-benefit-card,
+    .curtain-benefit-icon,
+    .curtain-collection-card,
+    .curtain-collection-image img {
+        transition: none;
+    }
+
+
+        .curtain-product-image:hover img,
+        .curtain-showcase-images figure:hover img,
+        .curtain-gallery-item:hover img,
+        .curtain-gallery-card:hover img,
+        .curtain-collection-card:hover
+        .curtain-collection-image img {
+            transform: none;
+        }
+
+
+        .curtain-features li:hover,
+        .curtain-benefit-card:hover,
+        .curtain-collection-card:hover {
+            transform: none;
+        }
+}
+
+
+/*==============================================================================
+    30. PRINT
+==============================================================================*/
+
+@media print {
+
+    .page-hero {
+        min-height: auto;
+    }
+
+
+    .page-hero-image {
+        position: relative;
+        height: 300px;
+    }
+
+
+    .page-overlay {
+        display: none;
+    }
+
+
+    .curtain-intro,
+    .curtain-product,
+    .curtain-showcase,
+    .curtain-gallery-section,
+    .curtain-benefits,
+    .curtain-collection,
+    .curtain-cta {
+        padding: 20px 0;
+        break-inside: avoid;
+    }
+
+
+    .curtain-product-grid,
+    .curtain-showcase-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .curtain-gallery-grid {
+        grid-template-columns: repeat( 3, 1fr );
+    }
+
+
+    .curtain-benefits-grid {
+        grid-template-columns: repeat( 4, 1fr );
+    }
+
+
+    .curtain-collection-grid {
+        grid-template-columns: repeat( 3, 1fr );
+    }
+
+
+    .curtain-product-image,
+    .curtain-gallery-item,
+    .curtain-gallery-card,
+    .curtain-benefit-card,
+    .curtain-collection-card {
+        box-shadow: none;
+    }
+}
+
+
+/*==============================================================================
+    CURTAIN.CSS — COMPLETE
+==============================================================================*/
